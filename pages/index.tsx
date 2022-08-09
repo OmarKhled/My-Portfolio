@@ -5,7 +5,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Omar Khled</title>
+        <title key={"title"}>Omar Khled</title>
         <meta name="description" content="Omar Khled - Creative Frontend Developer" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
