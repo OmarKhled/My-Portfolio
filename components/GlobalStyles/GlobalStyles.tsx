@@ -36,6 +36,11 @@ const GlobalStyles = createGlobalStyle`
     font: inherit;
   }
 
+  #__next {
+    width: 100%;
+    height: 100%;
+  }
+
   #root, #__next {
     isolation: isolate;
   }

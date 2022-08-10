@@ -1,25 +1,41 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import styled from 'styled-components'
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <>
       <Head>
         <title key={"title"}>Omar Khled</title>
         <meta name="description" content="Omar Khled - Creative Frontend Developer" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <h1>H1</h1>
-      <h2>H2</h2>
-      <h3>H3</h3>
-      <h4>H4</h4>
-      <h5>H5</h5>
-      <h6>H6</h6>
-      <p>Hi</p>
-      <small>small</small>
-    </div>
+      <Wrapper>
+        <SubTitle>Omarkhled.me</SubTitle>
+        <h1>Launching Soon!</h1>
+      </Wrapper>
+    </>
   )
 }
+
+const SubTitle = styled.small`
+  color: var(--spunPearl);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+`
+
+const Wrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  background-color: var(--cinder);
+  color: var(--royalBlue-350);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 1rem;
+`
 
 export default Home
