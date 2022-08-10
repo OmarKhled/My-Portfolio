@@ -10,14 +10,14 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1>Hi</h1>
-      <h2>Hi</h2>
-      <h3>Hi</h3>
-      <h4>Hi</h4>
-      <h5>Hi</h5>
-      <h6>Hi</h6>
+      <h1>H1</h1>
+      <h2>H2</h2>
+      <h3>H3</h3>
+      <h4>H4</h4>
+      <h5>H5</h5>
+      <h6>H6</h6>
       <p>Hi</p>
-      <small>Hi</small>
+      <small>small</small>
     </div>
   )
 }

@@ -1,7 +1,6 @@
 const BREAKPOINTS = {
-  tabletMin: 550,
-  laptopMin: 1100,
-  desktopMin: 1500,
+  mobileStart: 500,
+  tabletStart: 1000,
 };
 
 export default BREAKPOINTS;
