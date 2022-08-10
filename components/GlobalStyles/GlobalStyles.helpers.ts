@@ -25,7 +25,7 @@ const createColorVariables = (COLORS: {
   return colorVariables;
 };
 
-// A function to construct fluid typography css clamp function
+// A function to construct fluid typography css clamp
 
 // Refrence:
 // - https://www.smashingmagazine.com/2022/01/modern-fluid-typography-css-clamp/
