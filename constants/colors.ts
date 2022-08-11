@@ -114,4 +114,20 @@ const COLORS: types = {
   mintCream: "hsl(197, 100%, 99%)",
 };
 
+export const DARK_THEME_COLORS: { [key: string]: string } = {
+  primary: "hsl(230, 95%, 59%)",
+  secondary: "hsl(333, 100%, 57%)",
+  tertiary: "hsl(52, 100%, 50%)",
+  background: "hsl(265, 7%, 11%)",
+  textColor: "white",
+};
+
+export const LIGHT_THEME_COLORS: { [key: string]: string } = {
+  primary: "hsl(230, 95%, 59%)",
+  secondary: "hsl(200, 100%, 54%)",
+  tertiary: "hsl(143, 100%, 50%)",
+  background: "hsl(197, 100%, 99%)",
+  textColor: "hsl(260, 100%, 11%)",
+};
+
 export default COLORS;

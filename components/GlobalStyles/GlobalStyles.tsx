@@ -39,6 +39,11 @@ const GlobalStyles = createGlobalStyle`
   #root, #__next {
     isolation: isolate;
   }
+
+  #__next {
+    width: 100%;
+    height: 100%;
+  }
   
   /* Custom Typography Styles */
   h1, h2, h3, h4, h5, h6, p {

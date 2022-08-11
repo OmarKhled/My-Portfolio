@@ -22,6 +22,15 @@
     "paths": {
       "@constants/*": [
         "constants/*"
+      ],
+      "@components/*": [
+        "components/*"
+      ],
+      "@utils/*": [
+        "utils/*"
+      ],
+      "@styles/*": [
+        "styles/*"
       ]
     },
     "isolatedModules": true
