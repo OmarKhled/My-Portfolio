@@ -19,7 +19,7 @@ const GlobalStyles = createGlobalStyle`
 
   html, body {
     height: 100%;
-    font-family: "Wotfard";
+    font-family: "Wotfard", Arial, Helvetica, sans-serif;
   }
 
   body {
