@@ -3,15 +3,15 @@ import { createContext, useEffect, useState } from "react";
 
 import { setColorMode } from "./ThemeProvider.helpers"
 
-export type colorModeType = "dark" | "light";
+export type colorModeType = "dark" | "light" | undefined;
 
 type themeContextType = 
-({ colorMode: "dark" | "light", setColorMode: (c: "dark" | "light") => void });
+({ colorMode: colorModeType, setColorMode: (c: "dark" | "light") => void });
 
-export const ThemeContext = createContext<themeContextType>({ colorMode: "light", setColorMode: () => () => {} });
+export const ThemeContext = createContext<themeContextType>({ colorMode: undefined, setColorMode: () => () => {} });
 
 const ThemeProvider: NextPage<{ children: React.ReactNode }> = ({children}) => {  
-  const [colorMode, rawSetColorMode] = useState<colorModeType>("dark");
+  const [colorMode, rawSetColorMode] = useState<colorModeType>(undefined);
   
   useEffect(() => {
     const root = document.documentElement;

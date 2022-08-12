@@ -3,6 +3,9 @@ import { useContext } from "react";
 
 const ThemeToggle = () => {
   const {colorMode, setColorMode} = useContext(ThemeContext);
+  if(!colorMode) {
+    return null
+  }
   return (
     <label>
       <input
