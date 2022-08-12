@@ -19,7 +19,7 @@ const Home: NextPage = () => {
 }
 
 const SubTitle = styled.small`
-  color: var(--spunPearl);
+  color: var(--spunPearl); 
   text-transform: uppercase;
   font-weight: 600;
   margin-bottom: 0.5rem;
