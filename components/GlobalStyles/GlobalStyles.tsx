@@ -1,12 +1,7 @@
 import { createGlobalStyle } from "styled-components"
-import { clamp, createColorVariables } from "./GlobalStyles.helpers"
-
-import COLORS from "@constants/colors"
+import { clamp } from "./GlobalStyles.helpers"
 
 const GlobalStyles = createGlobalStyle`
-  :root {
-    ${createColorVariables(COLORS)}
-  }
 
   *, *::before, *::after {
     box-sizing: border-box;

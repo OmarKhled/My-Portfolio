@@ -1,4 +1,4 @@
-import { createColorVariables } from "@components/GlobalStyles/GlobalStyles.helpers";
+import createColorVariables from "@utils/createColorVariables";
 import COLORS, {
   DARK_THEME_COLORS,
   LIGHT_THEME_COLORS,

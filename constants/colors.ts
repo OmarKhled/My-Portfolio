@@ -115,19 +115,19 @@ const COLORS: types = {
 };
 
 export const DARK_THEME_COLORS: { [key: string]: string } = {
-  primary: "hsl(230, 95%, 59%)",
-  secondary: "hsl(333, 100%, 57%)",
-  tertiary: "hsl(52, 100%, 50%)",
-  background: "hsl(212, 32%, 8%)",
-  textColor: "white",
+  primary: "var(--royalBlue-350)",
+  secondary: "var(--hotPink)",
+  tertiary: "var(--goldenYellow)",
+  background: "var(--cinder)",
+  textColor: "var(--mintCream)",
 };
 
 export const LIGHT_THEME_COLORS: { [key: string]: string } = {
-  primary: "hsl(230, 95%, 59%)",
-  secondary: "hsl(200, 100%, 54%)",
+  primary: "var(--royalBlue-350)",
+  secondary: "hsl(--butterflyBlue)",
   tertiary: "hsl(143, 100%, 50%)",
-  background: "hsl(197, 100%, 99%)",
-  textColor: "hsl(260, 100%, 11%)",
+  background: "var(--mintCream)",
+  textColor: "var(--blackRock)",
 };
 
 export default COLORS;
