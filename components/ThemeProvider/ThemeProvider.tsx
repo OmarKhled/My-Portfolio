@@ -16,6 +16,17 @@ const ThemeProvider: NextPage<{ children: React.ReactNode }> = ({children}) => {
   useEffect(() => {
     const root = document.documentElement;
     rawSetColorMode(root.style.getPropertyValue("--color-mode") as colorModeType);
+
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",
+    e => {
+      let color: colorModeType;
+      if (e.matches) {
+        color = "dark";
+      } else {
+        color = "light"
+      }
+      rawSetColorMode(color);
+    });
   }, []);
 
   return (
@@ -24,5 +35,7 @@ const ThemeProvider: NextPage<{ children: React.ReactNode }> = ({children}) => {
     </ThemeContext.Provider>
   );
 }
+
+
 
 export default ThemeProvider;
