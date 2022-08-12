@@ -24,8 +24,13 @@ const codeToRunOnClient = `
     window.localStorage.setItem("colorMode", initalColorMode);
     root.style.setProperty("--color-mode", initalColorMode);
 
-    const themingStyleTag = document.createElement("style")
-    themingStyleTag.setAttribute("id", "theming-tag")
+    let themingStyleTag = document.getElementById("theming-tag");
+    if (themingStyleTag) {
+      themingStyleTag.remove();
+    }
+    themingStyleTag = document.createElement("style");
+
+    themingStyleTag.setAttribute("id", "theming-tag");
     if (initalColorMode === "dark") {
       themingStyleTag.innerHTML = \`${
         ":root { \n" +
