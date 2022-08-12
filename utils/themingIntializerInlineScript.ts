@@ -1,4 +1,7 @@
-import { DARK_THEME_COLORS, LIGHT_THEME_COLORS } from "@constants/colors";
+import COLORS, {
+  DARK_THEME_COLORS,
+  LIGHT_THEME_COLORS,
+} from "@constants/colors";
 import { createColorVariables } from "@components/GlobalStyles/GlobalStyles.helpers";
 
 const codeToRunOnClient = `
@@ -22,13 +25,20 @@ const codeToRunOnClient = `
     root.style.setProperty("--color-mode", initalColorMode);
 
     const themingStyleTag = document.createElement("style")
+    themingStyleTag.setAttribute("id", "theming-tag")
     if (initalColorMode === "dark") {
       themingStyleTag.innerHTML = \`${
-        ":root { \n" + createColorVariables(DARK_THEME_COLORS) + "}"
+        ":root { \n" +
+        createColorVariables(DARK_THEME_COLORS) +
+        createColorVariables(COLORS) +
+        "}"
       }\`
     } else if (initalColorMode === "light") {
       themingStyleTag.innerHTML = \`${
-        ":root { \n" + createColorVariables(LIGHT_THEME_COLORS) + "}"
+        ":root { \n" +
+        createColorVariables(LIGHT_THEME_COLORS) +
+        createColorVariables(COLORS) +
+        "}"
       }\`
     }
     document.head.appendChild(themingStyleTag)

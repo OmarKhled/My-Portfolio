@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import GlobalStyles from '@components/GlobalStyles';
 import Navbar from '@components/Navbar';
-import ThemeInitializer from '@components/ThemeInitializer';
+import ThemeProvider from '@components/ThemeProvider';
 import "@styles/fonts.scss"
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -13,13 +13,13 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <title key={'title'}>Omar Khaled</title>
       </Head>
-      <ThemeInitializer>
+      <ThemeProvider>
         <GlobalStyles />
         <Navbar />
         <Wrapper>
           <Component {...pageProps} />
         </Wrapper>
-      </ThemeInitializer>
+      </ThemeProvider>
     </>
   );
 }
