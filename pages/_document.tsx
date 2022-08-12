@@ -1,6 +1,9 @@
+
 import { NextPage } from 'next';
 import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
+
+import codeToRunOnClient from '@utils/themingIntializerInlineScript';
 
 const MyDocument: NextPage = ({ styles }: any) => {
   return (
@@ -9,6 +12,7 @@ const MyDocument: NextPage = ({ styles }: any) => {
         {styles}
       </Head>
       <body>
+        <script dangerouslySetInnerHTML={{__html: codeToRunOnClient}}></script>
         <Main />
         <NextScript />
       </body>
