@@ -1,7 +1,13 @@
+import COLORS, { DARK_THEME_COLORS } from "@constants/colors"
+import createColorVariables from "@utils/createColorVariables"
 import { createGlobalStyle } from "styled-components"
 import { clamp } from "./GlobalStyles.helpers"
 
 const GlobalStyles = createGlobalStyle`
+
+  :root {
+    ${createColorVariables(COLORS) + "\n" + createColorVariables(DARK_THEME_COLORS)}
+  }
 
   *, *::before, *::after {
     box-sizing: border-box;

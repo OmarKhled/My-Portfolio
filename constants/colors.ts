@@ -72,14 +72,14 @@ const COLORS: types = {
     "700": "hsl(52, 100%, 11%)",
   },
   mobester: {
-    "50": "hsl(265, 10%, 84%)",
-    "100": "hsl(265, 10%, 79%)",
-    "150": "hsl(265, 10%, 74%)",
-    "200": "hsl(265, 9%, 68%)",
-    "250": "hsl(265, 8%, 63%)",
-    "300": "hsl(265, 8%, 58%)",
-    "350": "hsl(265, 7%, 16%)",
-    default: "hsl(265, 7%, 11%)",
+    "50": "hsl(265, 10%, 78%)",
+    "100": "hsl(265, 10%, 74%)",
+    "150": "hsl(265, 10%, 70%)",
+    "200": "hsl(265, 9%, 64%)",
+    "250": "hsl(265, 8%, 60%)",
+    "300": "hsl(265, 8%, 57%)",
+    "350": "hsl(265, 7%, 53%)",
+    default: "hsl(265, 7%, 49%)",
   },
   spunPearl: {
     "50": "hsl(240, 11%, 93%)",
@@ -120,6 +120,7 @@ export const DARK_THEME_COLORS: { [key: string]: string } = {
   tertiary: "var(--goldenYellow)",
   background: "var(--cinder)",
   textColor: "var(--mintCream)",
+  grey: "var(--spunPearl)",
 };
 
 export const LIGHT_THEME_COLORS: { [key: string]: string } = {
@@ -128,6 +129,7 @@ export const LIGHT_THEME_COLORS: { [key: string]: string } = {
   tertiary: "hsl(143, 100%, 50%)",
   background: "var(--mintCream)",
   textColor: "var(--blackRock)",
+  grey: "var(--mobester)",
 };
 
 export default COLORS;

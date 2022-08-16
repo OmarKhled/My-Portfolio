@@ -6,17 +6,18 @@ const createColorVariables = (COLORS: {
     if (COLORS[property] instanceof Object) {
       for (const shade in COLORS[property] as Object) {
         if (shade === "default") {
-          colorVariables += `--${property}: ${
+          colorVariables += `  --${property}: ${
             Object(COLORS[property])[shade]
           };`;
         } else {
-          colorVariables += `--${property}-${shade}: ${
+          colorVariables += `  --${property}-${shade}: ${
             Object(COLORS[property])[shade]
           };`;
         }
+        colorVariables += "\n";
       }
     } else {
-      colorVariables += `--${property}: ${COLORS[property]};`;
+      colorVariables += `  --${property}: ${COLORS[property]};`;
     }
     colorVariables += "\n";
   }
