@@ -17,7 +17,6 @@ const setColorMode = (
     root.style.setProperty("--color-mode", value);
 
     if (themingStyleTag) {
-      console.log(themingStyleTag);
       themingStyleTag.innerHTML = `${
         ":root { \n" +
         createColorVariables(
