@@ -11,8 +11,6 @@ const Home: NextPage = () => {
         <meta name="description" content="Omar Khled - Creative Frontend Developer" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <h1>Theme Toggle Switch</h1>
       <ThemeToggle />
     </>
   )

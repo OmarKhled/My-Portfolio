@@ -18,6 +18,17 @@ const ThemeToggle = () => {
     opacity: `${ colorMode == "dark" ? "0" : "1" }`,
   });
 
+  const sunStyles = useSpring({
+    config: {...springConfig, duration: 300},
+    to: [
+      { transform: `rotate(${ colorMode == "dark" ? "-15deg" : "0deg" })` },
+      { transform: `rotate(2deg)` },
+      { transform: `rotate(${ colorMode == "dark" ? "-3deg" : "0deg" })` },
+      { transform: `rotate(0deg)` },
+    ],
+    from: { transform: `rotate(0deg)` },
+  });
+
   // If js is disabled from the browser, this component won't be rendered
   if(!colorMode) {
     return null;
@@ -37,7 +48,7 @@ const ThemeToggle = () => {
           <animated.circle style={moonMaskStyles} cx="24" cy="10" r="6" fill="black" />
         </mask>
         {/* The sun */}
-        <Circle className="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" />
+        <Circle style={sunStyles} className="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" />
         {/* The sun arrays */}
         <Group style={sunArrayStyles}>
           <circle cx="12" cy="3" r="1.4" />
@@ -59,9 +70,13 @@ const ThemeToggleIcon = styled.svg`
   width: 10rem;
   height: 10rem;
   cursor: pointer;
+  &:hover {
+    opacity: 0.9;
+  }
 `
-const Circle = styled.circle`
+const Circle = styled(animated.circle)`
   fill: var(--grey);
+  transform-origin: center;
 `
 const Group = styled(animated.g)`
   fill: var(--grey);

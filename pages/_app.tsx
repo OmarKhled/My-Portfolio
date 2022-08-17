@@ -30,7 +30,7 @@ const Wrapper = styled.div`
   height: 100%;
   width: 100%;
   padding: 1rem;
-  transition: color 500ms ease, background-color 500ms ease, fill 500ms ease, stroke 500ms ease;
+  transition: color 500ms ease, background-color 500ms ease, fill 500ms ease, stroke 500ms ease, opacity 500ms ease;
   @media (prefers-reduced-motion: reduce) {
     transition: none !important;
   }
