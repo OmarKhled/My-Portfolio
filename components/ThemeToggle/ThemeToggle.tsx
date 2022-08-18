@@ -21,9 +21,9 @@ const ThemeToggle = () => {
   const sunStyles = useSpring({
     config: {...springConfig, duration: 300},
     to: [
-      { transform: `rotate(${ colorMode == "dark" ? "-15deg" : "0deg" })` },
-      { transform: `rotate(2deg)` },
-      { transform: `rotate(${ colorMode == "dark" ? "-3deg" : "0deg" })` },
+      { transform: `rotate(${ colorMode == "dark" ? "-20deg" : "0deg" })` },
+      { transform: `rotate(5deg)` },
+      { transform: `rotate(${ colorMode == "dark" ? "-8deg" : "0deg" })` },
       { transform: `rotate(0deg)` },
     ],
     from: { transform: `rotate(0deg)` },

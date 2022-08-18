@@ -21,21 +21,21 @@ const COLORS: types = {
     "700": "hsl(230, 79%, 16%)",
   },
   butterflyBlue: {
-    "50": "hsl(200, 100%, 86%)",
-    "100": "hsl(200, 100%, 82%)",
-    "150": "hsl(200, 100%, 87%)",
-    "200": "hsl(200, 100%, 73%)",
-    "250": "hsl(200, 100%, 68%)",
-    "300": "hsl(200, 100%, 63%)",
-    "350": "hsl(200, 100%, 59%)",
-    default: "hsl(200, 100%, 54%)",
-    "400": "hsl(200, 85%, 49%)",
-    "450": "hsl(200, 85%, 43%)",
-    "500": "hsl(200, 85%, 38%)",
-    "550": "hsl(200, 85%, 32%)",
-    "600": "hsl(200, 85%, 27%)",
-    "650": "hsl(200, 85%, 22%)",
-    "700": "hsl(200, 85%, 16%)",
+    "50": "hsl(200, 100%, 81%)",
+    "100": "hsl(200, 100%, 86%)",
+    "150": "hsl(200, 100%, 82%)",
+    "200": "hsl(200, 100%, 87%)",
+    "250": "hsl(200, 100%, 73%)",
+    "300": "hsl(200, 100%, 68%)",
+    "350": "hsl(200, 100%, 63%)",
+    default: "hsl(200, 100%, 59%)",
+    "400": "hsl(200, 100%, 54%)",
+    "450": "hsl(200, 85%, 49%)",
+    "500": "hsl(200, 85%, 43%)",
+    "550": "hsl(200, 85%, 38%)",
+    "600": "hsl(200, 85%, 32%)",
+    "650": "hsl(200, 85%, 27%)",
+    "700": "hsl(200, 85%, 22%)",
   },
   hotPink: {
     "50": "hsl(333, 100%, 84%)",
@@ -70,6 +70,16 @@ const COLORS: types = {
     "600": "hsl(52, 100%, 22%)",
     "650": "hsl(52, 100%, 17%)",
     "700": "hsl(52, 100%, 11%)",
+  },
+  violetEggplant: {
+    "50": "hsl(282, 55%, 76%)",
+    "100": "hsl(282, 54%, 68%)",
+    "150": "hsl(282, 53%, 62%)",
+    "200": "hsl(282, 52%, 55%)",
+    "250": "hsl(282, 54%, 49%)",
+    "300": "hsl(282, 67%, 43%)",
+    "350": "hsl(282, 82%, 37%)",
+    default: "hsl(282, 100%, 32%)",
   },
   mobester: {
     "50": "hsl(265, 10%, 78%)",
@@ -114,8 +124,8 @@ const COLORS: types = {
   mintCream: "hsl(197, 100%, 99%)",
 };
 
-export const DARK_THEME_COLORS: { [key: string]: string } = {
-  primary: "var(--royalBlue-350)",
+export const DARK_THEME_COLORS: { [key: string]: `var(--${string})` } = {
+  primary: "var(--royalBlue)",
   secondary: "var(--hotPink)",
   tertiary: "var(--goldenYellow)",
   background: "var(--cinder)",
@@ -123,10 +133,10 @@ export const DARK_THEME_COLORS: { [key: string]: string } = {
   grey: "var(--spunPearl)",
 };
 
-export const LIGHT_THEME_COLORS: { [key: string]: string } = {
+export const LIGHT_THEME_COLORS: { [key: string]: `var(--${string})` } = {
   primary: "var(--royalBlue-350)",
-  secondary: "hsl(--butterflyBlue)",
-  tertiary: "hsl(143, 100%, 50%)",
+  secondary: "var(--butterflyBlue)",
+  tertiary: "var(--violetEggplant)",
   background: "var(--mintCream)",
   textColor: "var(--blackRock)",
   grey: "var(--mobester)",
