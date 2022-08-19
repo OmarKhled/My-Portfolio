@@ -45,12 +45,12 @@ const ThemeToggle = ({ ...props }) => {
         viewBox="0 0 24 24" 
       >
           {/* The Moon Mask */}
-          <mask id="moon-mask">
+          <mask id="moonmask">
             <rect x="0" y="0" width="100%" height="100%" fill="white" />
             <animated.circle style={moonMaskStyles} cx="24" cy="10" r="6" fill="black" />
           </mask>
           {/* The sun */}
-          <Circle style={sunStyles} className="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" />
+          <Circle style={sunStyles} className="sun" cx="12" cy="12" r="6" mask="url(#moonmask)" />
           {/* The sun arrays */}
           <Group style={sunArrayStyles}>
             <circle cx="12" cy="3" r="1.4" />

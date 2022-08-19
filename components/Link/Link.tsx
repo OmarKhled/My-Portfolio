@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const StylizedLink: NextPage<{ href: string, children: React.ReactNode }> = ({ href, children, ...props }) => {
   return (
-    <Link href={href} passHref prefetch>
+    <Link href={href} prefetch>
       <AnchorTag {...props}>{children}</AnchorTag>
     </Link>
   );

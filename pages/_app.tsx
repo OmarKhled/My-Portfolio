@@ -15,8 +15,8 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <GlobalStyles />
       <ThemeProvider>
+        <Navbar />
         <Wrapper>
-          <Navbar />
           <Component {...pageProps} />
         </Wrapper>
       </ThemeProvider>

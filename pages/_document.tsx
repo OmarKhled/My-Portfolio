@@ -1,4 +1,3 @@
-
 import { NextPage } from 'next';
 import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
@@ -7,12 +6,15 @@ import codeToRunOnClient from '@utils/themingIntializerInlineScript';
 
 const MyDocument: NextPage = ({ styles }: any) => {
   return (
-    <Html>
+    <Html lang='en'>
       <Head>
         {styles}
       </Head>
       <body>
         <script dangerouslySetInnerHTML={{__html: codeToRunOnClient}}></script>
+        {/* This portal divs has to go in this order that the moonmask display block element will always stay on top */}
+        <div id='mobile-nav-portal'></div>
+        <div id='nav-portal'></div>
         <Main />
         <NextScript />
       </body>

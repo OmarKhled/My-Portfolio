@@ -21,6 +21,7 @@ const GlobalStyles = createGlobalStyle`
   html, body {
     height: 100%;
     font-family: "Wotfard", Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
   }
 
   body {
@@ -47,6 +48,7 @@ const GlobalStyles = createGlobalStyle`
 
   #root, #__next {
     isolation: isolate;
+    z-index: 0;
   }
 
   #__next {
@@ -90,7 +92,7 @@ const GlobalStyles = createGlobalStyle`
     font-size: ${clamp(18.00, 22.50)};
   }
 
-  p, a {
+  p, a, li {
     font-weight: 400;
     font-size: ${clamp(16.00, 18.00)};
   }

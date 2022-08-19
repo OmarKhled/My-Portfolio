@@ -4,26 +4,50 @@ import styled from "styled-components";
 import { AiFillGithub, AiOutlineBehance } from "react-icons/ai"
 
 import { clamp } from "@components/GlobalStyles/GlobalStyles.helpers";
+import { QUERIES } from "@constants/breakpoints";
 import ThemeToggle from "@components/ThemeToggle";
 import MenuBurger from "./MenuBurger";
-import { QUERIES } from "@constants/breakpoints";
+import ReactDOM from "react-dom";
+import { useEffect, useState } from "react";
+import MobileNav from "./MobileNav";
+import Link from "next/link";
 
 const Navbar: NextPage = () => {
+  const [mounted, setMounted] = useState(false);
+  const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false);
+  useEffect(() => {
+    setMounted(true)
+  }, [])
   const { asPath } = useRouter();
-  return (
+  const toggleMobileNav = (isOpen: boolean) => {
+    setMobileNavOpen(isOpen);
+    if (isOpen) {
+      document.body!.style!.overflow = "hidden"
+    } else {
+      document.body!.style!.removeProperty("overflow")
+    }
+  }
+  return mounted === false ? null : ReactDOM.createPortal(
     <>
+    <MobileNav open={mobileNavOpen} setOpen={toggleMobileNav} />
     <Wrapper>
       <Name>Omar Khled</Name>
       <Nav>
         <NavElements>
           <NavElement>
-            <NavLink currentPath={asPath} href="/">Home</NavLink>
+            <Link href="/" passHref>
+              <NavLink currentPath={asPath}>Home</NavLink>
+            </Link>
           </NavElement>
           <NavElement>
-            <NavLink currentPath={asPath} href="/about">About</NavLink>
+            <Link href="/about" passHref>
+              <NavLink currentPath={asPath}>About</NavLink>
+            </Link>
           </NavElement>
           <NavElement>
-            <NavLink currentPath={asPath} href="/previouswork">Previous Work</NavLink>
+          <Link href="/previouswork" passHref>
+              <NavLink currentPath={asPath}>Previous Work</NavLink>
+            </Link>
           </NavElement>
         </NavElements>
       </Nav>
@@ -38,10 +62,10 @@ const Navbar: NextPage = () => {
           <AiOutlineBehance />
         </IconWrapper>
       </ExternalLinks>
-      <MenuBurgerIcon />
+      <MenuBurgerIcon open={mobileNavOpen} setOpen={toggleMobileNav} />
     </Wrapper>
     </>
-  );
+  , document.getElementById("nav-portal") as HTMLElement);
 }
 
 
@@ -51,8 +75,10 @@ const Wrapper = styled.header`
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding-top: 3rem;
+  padding-top: ${clamp(35, 48)};
   transition: color 2000ms ease;
+  width: 80%;
+  margin: auto;
   @media ${QUERIES.tabletAndUp} {
     grid-template-columns: auto 1fr auto;
     align-items: baseline;
@@ -82,7 +108,7 @@ const NavElement = styled.li`
   display: inline-block;
   padding: 0 0.8rem;
 `
-const NavLink = styled.a<{ currentPath: string }>`
+export const NavLink = styled.a<{ currentPath: string }>`
   --color: ${(p) => p.currentPath === p.href ? "var(--secondary)" : "var(--textColor)"} !important;
   color: var(--color);
   text-decoration: none;
@@ -97,7 +123,7 @@ const NavLink = styled.a<{ currentPath: string }>`
 const ExternalLinks = styled.div`
   display: none;
   @media ${QUERIES.tabletAndUp} {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(3, 1fr);
     max-height: 100%;
     gap: 0.8rem;
