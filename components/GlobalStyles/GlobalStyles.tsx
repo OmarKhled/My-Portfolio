@@ -25,9 +25,12 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     -webkit-font-smoothing: antialiased;
+    background-color: var(--background);
+    color: var(--textColor);
+    transition: color 400ms ease, background-color 400ms ease ;
   }
 
-  img, picture, video, canvas, svg {
+  img, picture, video, canvas {
     display: block;
     max-width: 100%;
     line-height: 0;
@@ -87,7 +90,7 @@ const GlobalStyles = createGlobalStyle`
     font-size: ${clamp(18.00, 22.50)};
   }
 
-  p {
+  p, a {
     font-weight: 400;
     font-size: ${clamp(16.00, 18.00)};
   }

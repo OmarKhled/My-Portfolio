@@ -1,3 +1,4 @@
+import { COLORMODE_VAR_KEY } from "@constants/constants";
 import { NextPage } from "next";
 import { createContext, useEffect, useState } from "react";
 
@@ -15,7 +16,7 @@ const ThemeProvider: NextPage<{ children: React.ReactNode }> = ({children}) => {
   
   useEffect(() => {
     const root = document.documentElement;
-    rawSetColorMode(root.style.getPropertyValue("--color-mode") as colorModeType);
+    rawSetColorMode(root.style.getPropertyValue(COLORMODE_VAR_KEY) as colorModeType);
 
     window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",
     e => {

@@ -13,10 +13,10 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <title key={'title'}>Omar Khaled</title>
       </Head>
+      <GlobalStyles />
       <ThemeProvider>
-        <GlobalStyles />
-        <Navbar />
         <Wrapper>
+          <Navbar />
           <Component {...pageProps} />
         </Wrapper>
       </ThemeProvider>
@@ -25,12 +25,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 }
 
 const Wrapper = styled.div`
-  color: var(--textColor, white);
-  background-color: var(--background, red);
   height: 100%;
-  width: 100%;
-  padding: 1rem;
-  transition: color 500ms ease, background-color 500ms ease, fill 500ms ease, stroke 500ms ease, opacity 500ms ease;
+  width: 80%;
+  margin: 0 auto;
   @media (prefers-reduced-motion: reduce) {
     transition: none !important;
   }

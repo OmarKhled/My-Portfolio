@@ -4,21 +4,21 @@ interface types {
 
 const COLORS: types = {
   royalBlue: {
-    "50": "hsl(230, 95%, 86%)",
-    "100": "hsl(230, 95%, 82%)",
-    "150": "hsl(230, 95%, 77%)",
-    "200": "hsl(230, 95%, 73%)",
-    "250": "hsl(230, 95%, 68%)",
-    "300": "hsl(230, 95%, 64%)",
-    "350": "hsl(230, 95%, 59%)",
-    default: "hsl(230, 97%, 55%)",
-    "400": "hsl(230, 79%, 49%)",
-    "450": "hsl(230, 79%, 44%)",
-    "500": "hsl(230, 79%, 38%)",
-    "550": "hsl(230, 79%, 33%)",
-    "600": "hsl(230, 79%, 27%)",
-    "650": "hsl(230, 79%, 22%)",
-    "700": "hsl(230, 79%, 16%)",
+    "50": "hsl(230, 95%, 81%)",
+    "100": "hsl(230, 95%, 86%)",
+    "150": "hsl(230, 95%, 82%)",
+    "200": "hsl(230, 95%, 77%)",
+    "250": "hsl(230, 95%, 73%)",
+    "300": "hsl(230, 95%, 68%)",
+    "350": "hsl(230, 95%, 64%)",
+    default: "hsl(230, 95%, 59%)",
+    "400": "hsl(230, 97%, 55%)",
+    "450": "hsl(230, 79%, 49%)",
+    "500": "hsl(230, 79%, 44%)",
+    "550": "hsl(230, 79%, 38%)",
+    "600": "hsl(230, 79%, 33%)",
+    "650": "hsl(230, 79%, 27%)",
+    "700": "hsl(230, 79%, 22%)",
   },
   butterflyBlue: {
     "50": "hsl(200, 100%, 81%)",
@@ -134,7 +134,7 @@ export const DARK_THEME_COLORS: { [key: string]: `var(--${string})` } = {
 };
 
 export const LIGHT_THEME_COLORS: { [key: string]: `var(--${string})` } = {
-  primary: "var(--royalBlue-350)",
+  primary: "var(--royalBlue)",
   secondary: "var(--butterflyBlue)",
   tertiary: "var(--violetEggplant)",
   background: "var(--mintCream)",

@@ -5,16 +5,21 @@ import COLORS, {
 } from "@constants/colors";
 import { Dispatch, SetStateAction } from "react";
 import { colorModeType } from "./ThemeProvider";
+import {
+  COLORMODE_STORAGE_KEY,
+  COLORMODE_VAR_KEY,
+  THEMING_TAG_ID,
+} from "@constants/constants";
 
 const setColorMode = (
   rawSetColorMode: Dispatch<SetStateAction<colorModeType>>
 ) => {
   return (value: "dark" | "light") => {
-    const themingStyleTag = document.getElementById("theming-tag");
+    const themingStyleTag = document.getElementById(THEMING_TAG_ID);
     const root = document.documentElement;
-    window.localStorage.setItem("colorMode", value);
+    window.localStorage.setItem(COLORMODE_STORAGE_KEY, value);
 
-    root.style.setProperty("--color-mode", value);
+    root.style.setProperty(COLORMODE_VAR_KEY, value);
 
     if (themingStyleTag) {
       themingStyleTag.innerHTML = `${
