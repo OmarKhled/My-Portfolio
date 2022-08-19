@@ -37,7 +37,7 @@ const ThemeToggle = ({ ...props }) => {
     // The span element is to increase the tapable area using ::after pesodu element
     // Replaced Elements like svgs can't have pesodu elements so we are using span to wrap it
     // Tapable are increase: https://courses.joshwcomeau.com/css-for-js/09-little-big-details/06-mobile-ux
-    <span {...props} onClick={() => setColorMode(colorMode === "dark" ? "light" : "dark")}>
+    <Wrapper {...props} aria-label="theme-toggle-button" onClick={() => setColorMode(colorMode === "dark" ? "light" : "dark")}>
       <ThemeToggleIcon 
         aria-hidden="true" 
         width="24" 
@@ -63,10 +63,17 @@ const ThemeToggle = ({ ...props }) => {
             <circle cx="5.6" cy="18.3" r="1.4" />
           </Group>
         </ThemeToggleIcon>
-    </span>
+    </Wrapper>
   );
 }
-
+const Wrapper = styled.button`
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+  cursor: pointer;
+`
 const ThemeToggleIcon = styled.svg`
   /* --size: 2rem; */
   fill: var(--grey);

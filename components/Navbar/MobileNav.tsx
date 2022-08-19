@@ -22,18 +22,18 @@ const MobileNav: NextPage<{ open: boolean, setOpen: (v: boolean) => void }> = ({
     <MobileNavWrapper open={open} onClick={() => setOpen(false)}>
       <Wrapper>
         <Nav onClick={(e) => {e.stopPropagation()}}>
-          <NavElemnets>
-            <NavElement>
+          <NavElemnets role="menu">
+            <NavElement role="menuitem">
               <Link href="/" passHref>
                 <NavLink currentPath={asPath}>Home</NavLink>
               </Link>
             </NavElement>
-            <NavElement>
+            <NavElement role="menuitem">
               <Link href="/about" passHref>
                 <NavLink currentPath={asPath}>About</NavLink>
               </Link>
             </NavElement>
-            <NavElement>
+            <NavElement role="menuitem">
               <Link href="/previouswork" passHref>
                 <NavLink currentPath={asPath}>Previous Work</NavLink>
               </Link>
@@ -44,10 +44,10 @@ const MobileNav: NextPage<{ open: boolean, setOpen: (v: boolean) => void }> = ({
           <IconWrapper>
             <ThemeToggleIcon />
           </IconWrapper>
-          <IconWrapper as="a" href="https://github.com/omarkhled" target="_blank">
+          <IconWrapper aria-label="github profile link" as="a" href="https://github.com/omarkhled" target="_blank">
             <AiFillGithub />
           </IconWrapper>
-          <IconWrapper as="a" href="https://behance.net/omarkhled" target="_blank">
+          <IconWrapper aria-label="behance profile link" as="a" href="https://behance.net/omarkhled" target="_blank">
             <AiOutlineBehance />
           </IconWrapper>
         </ExternalLinks>
@@ -68,6 +68,7 @@ const MobileNavWrapper = styled.div<WrapperProps>`
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  padding: 0;
   backdrop-filter: blur(8px);
   background: hsl(0, 0%, 0%, 0.23);
   transition: opacity 400ms ease;

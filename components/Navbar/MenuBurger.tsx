@@ -25,7 +25,7 @@ const MenuBurger: NextPage<props> = ({ open, setOpen, ...props }) => {
     "transformOrigin": "center"
   })
   return (
-    <span onClick={() => setOpen(!open)} {...props}>
+    <Wrapper aria-label="nav-menu-button" aria-haspopup="true" aria-expanded={open} onClick={() => setOpen(!open)} {...props}>
       <BurgeIcon viewBox="0 0 28 20.5">
         <g>
           <animated.rect style={topRectStyles} width="14" rx="1.45" height="2.9" />
@@ -33,9 +33,17 @@ const MenuBurger: NextPage<props> = ({ open, setOpen, ...props }) => {
           <animated.rect style={bottomRectStyles} width="14" rx="1.45" height="2.9" x="14" y="17.5"/>
         </g>
       </BurgeIcon>
-    </span>
+    </Wrapper>
   )
 }
+const Wrapper = styled.button`
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+  cursor: pointer;
+`
 
 const BurgeIcon = styled(animated.svg)`
   --size: ${clamp(28, 38)};

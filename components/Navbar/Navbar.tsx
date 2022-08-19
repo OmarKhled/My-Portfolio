@@ -26,7 +26,7 @@ const Navbar: NextPage = () => {
     <>
     <MobileNav open={mobileNavOpen} setOpen={toggleMobileNav} />
     <Wrapper>
-      <Name>Omar Khled</Name>
+      <Name href="/">Omar Khled</Name>
       <Nav>
         <NavElements>
           <NavElement>
@@ -50,10 +50,10 @@ const Navbar: NextPage = () => {
         <IconWrapper>
           <ThemeToggleIcon />
         </IconWrapper>
-        <IconWrapper as="a" href="https://github.com/omarkhled" target="_blank">
+        <IconWrapper aria-label="github profile link" as="a" href="https://github.com/omarkhled" target="_blank">
           <AiFillGithub />
         </IconWrapper>
-        <IconWrapper as="a" href="https://behance.net/omarkhled" target="_blank">
+        <IconWrapper aria-label="behance profile link" as="a" href="https://behance.net/omarkhled" target="_blank">
           <AiOutlineBehance />
         </IconWrapper>
       </ExternalLinks>
@@ -80,6 +80,7 @@ const Wrapper = styled.header`
   }
 `
 const Name = styled.a`
+  text-decoration: none;
   color: var(--primary);
   font-size: ${clamp(28.13, 35.16)};
   line-height: ${clamp(28.13, 35.16)};
