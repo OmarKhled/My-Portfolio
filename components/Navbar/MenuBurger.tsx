@@ -28,9 +28,9 @@ const MenuBurger: NextPage<props> = ({ open, setOpen, ...props }) => {
     <span onClick={() => setOpen(!open)} {...props}>
       <BurgeIcon viewBox="0 0 28 20.5">
         <g>
-          <animated.rect style={topRectStyles} width="14" height="2.9" />
-          <animated.rect style={centerRectStyles} width="28" height="2.9" y="9"/>
-          <animated.rect style={bottomRectStyles} width="14" height="2.9" x="14" y="17.5"/>
+          <animated.rect style={topRectStyles} width="14" rx="1.45" height="2.9" />
+          <animated.rect style={centerRectStyles} width="28" rx="1.45" height="2.9" y="9"/>
+          <animated.rect style={bottomRectStyles} width="14" rx="1.45" height="2.9" x="14" y="17.5"/>
         </g>
       </BurgeIcon>
     </span>
@@ -43,9 +43,6 @@ const BurgeIcon = styled(animated.svg)`
   fill: var(--secondary);
   transition: fill 400ms ease;
   cursor: pointer;
-  & rect {
-    rx: 1.45;
-  }
   position: relative;
   z-index: 2;
 `
