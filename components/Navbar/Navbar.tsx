@@ -1,23 +1,18 @@
+import { useState } from "react";
 import { NextPage } from "next";
 import { useRouter } from "next/router";
-import styled from "styled-components";
+import Link from "next/link";
 import { AiFillGithub, AiOutlineBehance } from "react-icons/ai"
+import styled from "styled-components";
 
 import { clamp } from "@components/GlobalStyles/GlobalStyles.helpers";
 import { QUERIES } from "@constants/breakpoints";
 import ThemeToggle from "@components/ThemeToggle";
 import MenuBurger from "./MenuBurger";
-import ReactDOM from "react-dom";
-import { useEffect, useState } from "react";
 import MobileNav from "./MobileNav";
-import Link from "next/link";
 
 const Navbar: NextPage = () => {
-  const [mounted, setMounted] = useState(false);
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false);
-  useEffect(() => {
-    setMounted(true)
-  }, [])
   const { asPath } = useRouter();
   const toggleMobileNav = (isOpen: boolean) => {
     setMobileNavOpen(isOpen);
@@ -27,7 +22,7 @@ const Navbar: NextPage = () => {
       document.body!.style!.removeProperty("overflow")
     }
   }
-  return mounted === false ? null : ReactDOM.createPortal(
+  return (
     <>
     <MobileNav open={mobileNavOpen} setOpen={toggleMobileNav} />
     <Wrapper>
@@ -65,7 +60,7 @@ const Navbar: NextPage = () => {
       <MenuBurgerIcon open={mobileNavOpen} setOpen={toggleMobileNav} />
     </Wrapper>
     </>
-  , document.getElementById("nav-portal") as HTMLElement);
+  );
 }
 
 
@@ -129,7 +124,7 @@ const ExternalLinks = styled.div`
     gap: 0.8rem;
   }
 `
-const IconWrapper = styled.span`
+export const IconWrapper = styled.span`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -151,7 +146,7 @@ const IconWrapper = styled.span`
     }
   }
 `
-const ThemeToggleIcon = styled(ThemeToggle)`
+export const ThemeToggleIcon = styled(ThemeToggle)`
   position: relative;
   line-height: 0;
   &::after {

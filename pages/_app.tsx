@@ -28,6 +28,8 @@ const Wrapper = styled.div`
   height: 100%;
   width: 80%;
   margin: 0 auto;
+  isolation: isolate;
+  z-index: 0;
   @media (prefers-reduced-motion: reduce) {
     transition: none !important;
   }

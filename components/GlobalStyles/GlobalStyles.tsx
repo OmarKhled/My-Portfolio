@@ -47,7 +47,6 @@ const GlobalStyles = createGlobalStyle`
   }
 
   #root, #__next {
-    isolation: isolate;
     z-index: 0;
   }
 

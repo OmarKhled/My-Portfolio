@@ -1,14 +1,15 @@
-import { clamp } from '@components/GlobalStyles/GlobalStyles.helpers'
-import ThemeToggle from '@components/ThemeToggle'
-import { QUERIES } from '@constants/breakpoints'
+import { useEffect, useState } from 'react'
+import ReactDOM from 'react-dom'
 import { NextPage } from 'next'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { useEffect, useState } from 'react'
-import ReactDOM from 'react-dom'
 import { AiFillGithub, AiOutlineBehance } from 'react-icons/ai'
 import styled from 'styled-components'
-import { NavLink } from './Navbar'
+
+import { clamp } from '@components/GlobalStyles/GlobalStyles.helpers'
+import { QUERIES } from '@constants/breakpoints'
+import { NavLink, IconWrapper, ThemeToggleIcon } from './Navbar'
+
 
 const MobileNav: NextPage<{ open: boolean, setOpen: (v: boolean) => void }> = ({ open, setOpen }) => {
   const [mounted, setMounted] = useState(false);
@@ -62,16 +63,16 @@ const MobileNavWrapper = styled.div<WrapperProps>`
   position: absolute;
   top: 0;
   left: 0;
+  isolation: isolate;
+  z-index: 1;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
   backdrop-filter: blur(8px);
   background: hsl(0, 0%, 0%, 0.23);
-  overflow: hidden;
   transition: opacity 400ms ease;
   opacity: ${p => p.open ? "1" : "0"};
   pointer-events: ${p => p.open ? "auto" : "none"};
-  isolation: isolate;
-  z-index: 1;
   @media ${QUERIES.tabletAndUp} {
     opacity: 0;
   }
@@ -89,9 +90,9 @@ const Nav = styled.nav`
 
 `
 const NavElemnets = styled.ul`
-  list-style: none;
   padding: 0;
   margin: 0;
+  list-style: none;
   text-align: left;
 `
 const NavElement = styled.li`
@@ -105,41 +106,5 @@ const ExternalLinks = styled.div`
   max-height: 100%;
   gap: 0.8rem;
   margin-left: -0.45rem;
-`
-const IconWrapper = styled.span`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-height: 100%;
-  padding: 0.4rem;
-  border-radius: 0.4rem;
-  will-change: background-color;
-  transition: fill 400ms ease, background-color 300ms ease;
-  cursor: pointer;
-  & svg {
-    width: 1.9rem;
-    height: 1.9rem;
-    fill: var(--grey);
-    transition: fill 400ms ease;
-  }
-  @media (hover: hover) and (pointer: fine) {
-    &:hover {
-      background-color: hsl(265, 7%, 49%, 0.2);
-    }
-  }
-`
-const ThemeToggleIcon = styled(ThemeToggle)`
-  position: relative;
-  line-height: 0;
-  &::after {
-    --tap-increment: -0.4rem;
-    content: '';
-    line-height: 0;
-    position: absolute;
-    top: var(--tap-increment);
-    left: var(--tap-increment);
-    right: var(--tap-increment);
-    bottom: var(--tap-increment);
-  }
 `
 export default MobileNav

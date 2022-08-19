@@ -1,4 +1,3 @@
-
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
@@ -10,8 +9,6 @@ const Home: NextPage = () => {
         <meta name="description" content="Omar Khled - Creative Frontend Developer" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>
-      </div>
     </>
   )
 }
