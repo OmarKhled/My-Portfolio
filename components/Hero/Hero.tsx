@@ -1,4 +1,5 @@
 import Button from "@components/Button";
+import { clamp } from "@components/GlobalStyles/GlobalStyles.helpers";
 import { NextPage } from "next";
 import styled from "styled-components";
 import MouseScroll from "./MouseScroll";
@@ -18,9 +19,8 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: min(72vh, 850px);
   margin: auto;
-  margin-top: 7rem;
+  margin-top: min(7rem, 16vw);
   width: fit-content;
   gap: 1.3rem;
   padding: 1rem;

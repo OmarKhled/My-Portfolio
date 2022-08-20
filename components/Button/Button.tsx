@@ -21,6 +21,7 @@ const Wrapper = styled.button<{ mode: modeType }>`
   border-radius: 8px;
   width: fit-content;
   text-decoration: none;
+  text-align: center;
   font-weight: 500;
   cursor: pointer;
   transition: box-shadow 300ms ease, background-color 400ms ease;
