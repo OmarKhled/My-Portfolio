@@ -124,22 +124,22 @@ const COLORS: types = {
   mintCream: "hsl(197, 100%, 99%)",
 };
 
-export const DARK_THEME_COLORS: { [key: string]: `var(--${string})` } = {
-  primary: "var(--royalBlue)",
-  secondary: "var(--hotPink)",
-  tertiary: "var(--goldenYellow)",
-  background: "var(--cinder)",
-  textColor: "var(--mintCream)",
-  grey: "var(--spunPearl)",
+export const DARK_THEME_COLORS: { [key: string]: any } = {
+  primary: COLORS.royalBlue,
+  secondary: COLORS.hotPink,
+  tertiary: COLORS.goldenYellow,
+  background: COLORS.cinder,
+  textColor: COLORS.mintCream,
+  grey: COLORS.spunPearl,
 };
 
-export const LIGHT_THEME_COLORS: { [key: string]: `var(--${string})` } = {
-  primary: "var(--royalBlue)",
-  secondary: "var(--butterflyBlue)",
-  tertiary: "var(--violetEggplant)",
-  background: "var(--mintCream)",
-  textColor: "var(--blackRock)",
-  grey: "var(--mobester)",
+export const LIGHT_THEME_COLORS: { [key: string]: any } = {
+  primary: COLORS.royalBlue,
+  secondary: COLORS.butterflyBlue,
+  tertiary: COLORS.violetEggplant,
+  background: COLORS.mintCream,
+  textColor: COLORS.blackRock,
+  grey: COLORS.mobester,
 };
 
 export default COLORS;

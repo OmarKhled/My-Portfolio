@@ -119,7 +119,8 @@ export const NavLink = styled.a<{ currentPath: string }>`
 const ExternalLinks = styled.div`
   display: none;
   @media ${QUERIES.tabletAndUp} {
-    display: flex;
+    display: grid;
+    /* align-self: end; */
     grid-template-columns: repeat(3, 1fr);
     max-height: 100%;
     gap: 0.8rem;

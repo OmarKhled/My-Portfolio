@@ -43,6 +43,9 @@ const Wrapper = styled.button`
   margin: 0;
   line-height: 0;
   cursor: pointer;
+  position: fixed;
+  z-index: 2;
+  place-self: flex-end;
 `
 
 const BurgeIcon = styled(animated.svg)`

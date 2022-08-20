@@ -58,6 +58,7 @@ const GlobalStyles = createGlobalStyle`
   h1, h2, h3, h4, h5, h6, p {
     min-height: 0vh;
     color: inherit;
+    overflow-wrap: break-word;
   }
 
   h1 {

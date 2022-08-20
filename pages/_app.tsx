@@ -30,6 +30,8 @@ const Wrapper = styled.div`
   margin: 0 auto;
   isolation: isolate;
   z-index: 0;
+  /* To avoid margin collapse */
+  padding: 1px;
   @media (prefers-reduced-motion: reduce) {
     transition: none !important;
   }

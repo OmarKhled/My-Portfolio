@@ -66,12 +66,12 @@ const MobileNavWrapper = styled.div<WrapperProps>`
   isolation: isolate;
   z-index: 1;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   overflow: hidden;
   padding: 0;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(30px);
   background: hsl(0, 0%, 0%, 0.23);
-  transition: opacity 400ms ease;
+  transition: opacity 500ms ease;
   opacity: ${p => p.open ? "1" : "0"};
   pointer-events: ${p => p.open ? "auto" : "none"};
   @media ${QUERIES.tabletAndUp} {
@@ -85,7 +85,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   width: 80%;
   margin: auto;
-  margin-top: ${clamp(7*16, 5*16)};
+  margin-top: ${clamp(6*16, 5*16)};
 `
 const Nav = styled.nav`
 
@@ -100,6 +100,10 @@ const NavElement = styled.li`
   padding: 0.5rem 0;
   margin: 0 0 1rem 0;
   cursor: pointer;
+  a {
+    font-weight: 500;
+    font-size: 1.3rem;
+  }
 `
 const ExternalLinks = styled.div`
   display: grid;
