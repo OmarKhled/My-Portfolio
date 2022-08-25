@@ -14,7 +14,6 @@ const MouseScroll: NextPage = ({ ...props }) => {
 }
 
 const Wrapper = styled.svg`
-  --size: 5rem;
   width: var(--size);
   height: var(--size);
 `

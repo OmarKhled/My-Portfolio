@@ -6,6 +6,7 @@ import GlobalStyles from '@components/GlobalStyles';
 import Navbar from '@components/Navbar';
 import ThemeProvider from '@components/ThemeProvider';
 import "@styles/fonts.scss"
+import { MAX_WIDTH } from '@constants/breakpoints';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -27,6 +28,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 const Wrapper = styled.div`
   height: 100%;
   width: 80%;
+  max-width: ${MAX_WIDTH / 16}rem;
   margin: 0 auto;
   isolation: isolate;
   z-index: 0;

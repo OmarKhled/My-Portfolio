@@ -1,7 +1,9 @@
 const BREAKPOINTS = {
   mobileStart: 500,
-  tabletStart: 1300,
+  tabletStart: 1000,
 };
+
+export const MAX_WIDTH = 1530;
 
 export const QUERIES = {
   mobileAndUp: `(min-width: ${BREAKPOINTS.mobileStart / 16}rem)`,

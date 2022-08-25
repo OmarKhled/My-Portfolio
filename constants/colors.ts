@@ -131,6 +131,15 @@ export const DARK_THEME_COLORS: { [key: string]: any } = {
   background: COLORS.cinder,
   textColor: COLORS.mintCream,
   grey: COLORS.spunPearl,
+  "shadow-color": "var(--background)",
+  shadow: `0.3px 0.5px 0.5px hsl(var(--shadow-color) / 0.5),
+  0.5px 1.1px 1px -0.6px hsl(var(--shadow-color) / 0.44),
+  1.1px 2.3px 2.1px -1.3px hsl(var(--shadow-color) / 0.39),
+  2.4px 4.7px 4.4px -1.9px hsl(var(--shadow-color) / 0.34),
+  4.6px 9.3px 8.7px -2.5px hsl(var(--shadow-color) / 0.28),
+  8.3px 16.6px 15.6px -3.1px hsl(var(--shadow-color) / 0.23),
+  13.7px 27.4px 25.7px -3.8px hsl(var(--shadow-color) / 0.18),
+  21.3px 42.5px 39.9px -4.4px hsl(var(--shadow-color) / 0.12)`,
 };
 
 export const LIGHT_THEME_COLORS: { [key: string]: any } = {

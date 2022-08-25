@@ -6,7 +6,7 @@ import { AiFillGithub, AiOutlineBehance } from "react-icons/ai"
 import styled from "styled-components";
 
 import { clamp } from "@components/GlobalStyles/GlobalStyles.helpers";
-import { QUERIES } from "@constants/breakpoints";
+import { MAX_WIDTH, QUERIES } from "@constants/breakpoints";
 import ThemeToggle from "@components/ThemeToggle";
 import MenuBurger from "./MenuBurger";
 import MobileNav from "./MobileNav";
@@ -73,6 +73,7 @@ const Wrapper = styled.header`
   padding-top: ${clamp(35, 48)};
   transition: color 2000ms ease;
   width: 80%;
+  max-width: ${MAX_WIDTH / 16}rem;
   margin: auto;
   @media ${QUERIES.tabletAndUp} {
     grid-template-columns: auto 1fr auto;

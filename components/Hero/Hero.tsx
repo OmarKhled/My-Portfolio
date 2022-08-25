@@ -20,10 +20,10 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   margin: auto;
-  margin-top: min(7rem, 16vw);
+  margin-top: ${clamp(60, 144)};
   width: fit-content;
-  gap: 1.3rem;
-  padding: 1rem;
+  gap: 2rem;
+  padding: 2rem 0;
 `
 const Title = styled.h1`
   max-width: min(600px, 100%);
@@ -39,7 +39,9 @@ const Muted = styled.h6`
   font-weight: 700;
 `
 const MouseScrollIcon = styled(MouseScroll)`
-  margin-top: 2.5rem;
+  --size: ${clamp(60, 80)};
+  margin-top: ${clamp(60, 130)};
+  /* margin-top: auto; */
 `
 
 
