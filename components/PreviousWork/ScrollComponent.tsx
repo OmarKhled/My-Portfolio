@@ -1,15 +1,20 @@
 import { NextPage } from 'next'
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import { useTransform, useScroll } from 'framer-motion'
 import { animated, useSpring } from 'react-spring'
 import { QUERIES } from '@constants/breakpoints'
 
 
-const ScrollComponent: NextPage<{ wrapperRef: any }> = ({ wrapperRef }) => {
+const ScrollComponent: NextPage<{ scrollYProgress: any }> = ({ scrollYProgress }) => {
   const imgRef = useRef<HTMLImageElement>(null);
 
-  const { scrollYProgress } = useScroll({ target: wrapperRef, offset: ["start center", "end center"] });
+  useEffect(() => {
+    scrollYProgress.onChange((l: any) => {
+      console.log(l)
+    })
+    console.log(imgRef);
+  }, [scrollYProgress]);
 
 
   const firstImage = useSpring({ 
@@ -20,8 +25,8 @@ const ScrollComponent: NextPage<{ wrapperRef: any }> = ({ wrapperRef }) => {
     transform: `translateY(${useTransform(scrollYProgress, [0, 0.4, 0.5], [0, 0, -100]).get()}%) scale(${useTransform(scrollYProgress, [0, 0.5, 0.6], [1, 1, 0.9]).get()})`,
   })
   const thirdImage = useSpring({
-    opacity: `${useTransform(scrollYProgress, [0, 0.69, 0.79], [0, 0, 1]).get()}`,
-    transform: `translateY(${useTransform(scrollYProgress, [0, 0.69, 0.79], [-100, -100, -200]).get()}%)`,
+    opacity: `${useTransform(scrollYProgress, [0, 0.63, 0.75], [0, 0, 1]).get()}`,
+    transform: `translateY(${useTransform(scrollYProgress, [0, 0.63, 0.75], [-100, -100, -200]).get()}%)`,
   })
 
   return (
@@ -59,7 +64,9 @@ const SecondImage = styled(Img)`
 `
 
 const ThirdImage = styled(Img)`
-  
+  z-index: 3;
+  transform-origin: center;
+  top: 0;
 `
 
 export default ScrollComponent

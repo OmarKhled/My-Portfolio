@@ -1,17 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Testimonial = () => {
+const Testimonial = ({ name = "Youssef Nasser", job = "Project Manger at Nilepreneurs", children = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo error assumenda vel dolorum sapiente, reprehenderit illo alias.", img="/images/Testimonials/nasser.webp" }) => {
   return (
     <Wrapper>
       <Profile>
-        <ProfileImage src='/images/nasser.webp' />
+        <ProfileImage src={img} />
         <div>
-          <Name>Youssef Nasser</Name>
-          <Job>Mechanical inclusive designer</Job>
+          <Name>{name}</Name>
+          <Job>{job}</Job>
         </div>
       </Profile>
-      <Description>Omar is one from a few who cares about little polished details. He loves what he do and gives it whatever it takes.</Description>
+      <Description>{children}</Description>
     </Wrapper>
   )
 }

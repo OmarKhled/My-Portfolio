@@ -2,21 +2,22 @@ import { NextPage } from "next";
 import { useEffect, useRef, useState } from "react";
 import { useScroll } from "framer-motion";
 import styled from "styled-components";
+
 import { QUERIES } from "@constants/breakpoints";
 import Details from "./Details";
 import ScrollComponent from "./ScrollComponent";
 
 const PreviousWork: NextPage = () => {
   const ref = useRef(null)
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start center", "end 300px"] })
-  const [y, setY] = useState(0)
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start center", "end center"] })
+  const [y, setY] = useState(0);
 
   useEffect(() => {
     scrollYProgress.onChange((latest) => {
-      // console.log("element scroll: ", latest);
-      setY(latest)
+      console.log("element scroll: ", latest);
+      setY(latest);
     })
-  }, []);
+  }, [scrollYProgress]);
   return (
     <>
       <Wrapper ref={ref}>
@@ -24,7 +25,7 @@ const PreviousWork: NextPage = () => {
           <Details />
         </FirstColumn>
         <SecondColumn>
-          <ScrollComponent wrapperRef={ref} />
+          <ScrollComponent scrollYProgress={scrollYProgress} />
           <PreviousProjects src="/images/previousProjects.webp" />
         </SecondColumn>
       </Wrapper>

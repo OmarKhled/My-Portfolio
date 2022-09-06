@@ -7,10 +7,10 @@ const Details: NextPage = () => {
     <>
       <Title>Worked on a bunch of blazing web projects.</Title>
       <Description>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        I like to develop a wide range of products for the web like chrome extensions, static websites, full stack apps, landing pages, etc… Throught out the past few years, I’ve had several opportunities to create memorable products that aren’t only enjoyable to use, but also written in a code that is easy to maintain.
       </Description>
-      <Testimonial />
-      <Testimonial />
+      <Testimonial name="Mohamed Mustafa" job="Rafiqi CEO" img='/images/Testimonials/mustafa.webp' />
+      <Testimonial name="Youssef Nasser" job="Project Manger at Nilepreneurs" img='/images/Testimonials/nasser.webp'/>
     </>
   )
 }
