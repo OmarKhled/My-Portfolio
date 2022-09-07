@@ -29,7 +29,6 @@ const PreviousWork: NextPage = () => {
           <PreviousProjects src="/images/previousProjects.webp" />
         </SecondColumn>
       </Wrapper>
-      <div style={{ height: "2000px" }}></div>
     </>
   );
 }

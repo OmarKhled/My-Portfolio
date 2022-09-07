@@ -1,5 +1,24 @@
+type hslColor = `hsl(${number}, ${number}%, ${number}%)`;
 interface types {
-  [key: string]: Object | string;
+  [key: string]:
+    | hslColor
+    | {
+        "50"?: hslColor;
+        "100"?: hslColor;
+        "150"?: hslColor;
+        "200"?: hslColor;
+        "250"?: hslColor;
+        "300"?: hslColor;
+        "350"?: hslColor;
+        default: hslColor;
+        "400"?: hslColor;
+        "450"?: hslColor;
+        "500"?: hslColor;
+        "550"?: hslColor;
+        "600"?: hslColor;
+        "650"?: hslColor;
+        "700"?: hslColor;
+      };
 }
 
 const COLORS: types = {

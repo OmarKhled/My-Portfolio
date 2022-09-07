@@ -31,9 +31,9 @@ const ScrollComponent: NextPage<{ scrollYProgress: any }> = ({ scrollYProgress }
 
   return (
     <ScrollWrapper height={imgRef.current?.getBoundingClientRect().height as number}>
-      <FirstImage style={firstImage} src="/images/projects/ieeenu.png" />
-      <SecondImage style={secondImage} src="/images/projects/ieeestore.png" />
-      <ThirdImage ref={imgRef} style={thirdImage} src="/images/projects/dedmet.png" />
+      <FirstImage style={firstImage} src="/images/projects/screenshots/ieeenu.png" />
+      <SecondImage style={secondImage} src="/images/projects/screenshots/ieeestore.png" />
+      <ThirdImage ref={imgRef} style={thirdImage} src="/images/projects/screenshots/dedmet.png" />
     </ScrollWrapper>
   )
 }

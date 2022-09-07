@@ -91,7 +91,7 @@ const GlobalStyles = createGlobalStyle`
     font-size: ${clamp(18.00, 22.50)};
   }
 
-  p, a, li {
+  p, li {
     font-weight: 400;
     font-size: ${clamp(16.00, 18.00)};
   }
