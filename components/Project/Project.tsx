@@ -1,33 +1,61 @@
 import { clamp } from "@components/GlobalStyles/GlobalStyles.helpers";
 import COLORS from "@constants/colors";
+import { NextPage } from "next";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
+import getTextColor from "./Poject.helpers";
 
-const Project = () => {
+const Project: NextPage<{ 
+  link?: string,
+  name?: string,
+  avatarImg?: string,
+  client?: string,
+  year?: string | number,
+  backgroundColor?: string
+}> = ({ 
+  link = "https://ieeenu.com", 
+  name = "IEEE NU Website", 
+  avatarImg= "/images/projects/avatar/ieeenu.webp", 
+  client = "IEEE NU", 
+  year = "2022",
+  backgroundColor= COLORS.goldenYellow.default
+}) => {
   return (
-    <Wrapper>
-      <Title><Link href="https://ieeenu.com" passHref ><TitleLink target={"_blank"}>IEEE NU Website</TitleLink></Link></Title>
+    <Wrapper backgroundColor={backgroundColor}>
+      <Title backgroundColor={backgroundColor}><Link href={link} passHref ><TitleLink target={"_blank"}>{name}</TitleLink></Link></Title>
       <Metadata>
-        <Client>IEEE NU</Client>
-        <Year>2022</Year>
+        <Client>{client}</Client>
+        <Year>{year}</Year>
       </Metadata>
-      <Avatar src="/images/projects/avatar/ieeenu.webp" />
+      <Avatar src={avatarImg} />
     </Wrapper>
   );
 }
 
-// Convert the max width to dynamic value refrenced by the MAX_WIDTH Variable and the inherited gap custom css property
-const Wrapper = styled.div`
+const TitleLink = styled.a`
+  color: inherit;
+  text-decoration: none;
+  will-change: box-shadow;
+  transition: box-shadow 300ms ease;
+`
+const Wrapper = styled.div<{ backgroundColor: string }>`
   --padding: ${clamp(22, 45)};
-  background-color: ${COLORS.royalBlue[450]};
-  color: #fff;
+  background-color: ${(p) => p.backgroundColor};
   border-radius: ${clamp(15, 25)};
   padding: var(--padding) var(--padding) 0 var(--padding);
   overflow: hidden;
   position: relative;
-  /* max-width: 29.375rem; */
+  max-width: 29.375rem;
   width: fit-content;
+  @media (hover: hover) and (pointer: fine) { 
+    &:hover {
+      cursor: pointer;
+      ${TitleLink} {
+        box-shadow: 0px 3px 0px ${(p) => getTextColor(p.backgroundColor)};
+      }
+    }
+  }
 `
 const Metadata = styled.div`
   @media (hover: hover) and (pointer: fine) { 
@@ -35,22 +63,11 @@ const Metadata = styled.div`
   }
   display: flex;
 `
-const TitleLink = styled.a`
-  color: inherit;
-  text-decoration: none;
-  will-change: box-shadow;
-  transition: box-shadow 300ms ease;
-  @media (hover: hover) and (pointer: fine) { 
-    &:hover {
-      box-shadow: 0px 3px 0px white;
-    }
-  }
-`
-const Title = styled.h5`
-
+const Title = styled.h5<{ backgroundColor: string }>`
+  color: ${(p) => getTextColor(p.backgroundColor)};
 `
 const Muted = styled.p`
-  color: var(--grey-150);
+  color: var(--grey-350);
   font-weight: 600;
 `
 const Client = styled(Muted)`
@@ -61,9 +78,10 @@ const Client = styled(Muted)`
 `
 const Year = styled(Muted)``
 const Avatar = styled.img`
+  --width: calc(100% + var(--padding) * 2);
   display: block;
-  width: calc(100% + var(--padding) * 2);
-  max-width: 38rem;
+  width: var(--width);
+  max-width: var(--width);
   margin-left: calc(var(--padding)*-1);
 `
 

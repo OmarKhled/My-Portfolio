@@ -21,7 +21,7 @@ interface types {
       };
 }
 
-const COLORS: types = {
+const COLORS = {
   royalBlue: {
     "50": "hsl(230, 95%, 81%)",
     "100": "hsl(230, 95%, 86%)",

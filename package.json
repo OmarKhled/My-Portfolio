@@ -9,13 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/color-convert": "^2.0.0",
+    "@types/wcag-contrast": "^3.0.0",
+    "color-convert": "^2.0.1",
     "framer-motion": "^7.2.0",
     "next": "12.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
     "react-spring": "^9.5.2",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "wcag-contrast": "^3.0.0"
   },
   "devDependencies": {
     "@types/node": "18.6.5",
