@@ -24,7 +24,7 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 `
 const FlexContainer = styled.div`
   display: flex;
@@ -40,7 +40,6 @@ const NextJsLogoIcon = styled(NextJsLogo)`
 `
 const VercelLogoIcon = styled(VercelLogo)`
   fill: var(--textColor);
-  height: 100px;
 `
 
 export default UsedTechnologies;
