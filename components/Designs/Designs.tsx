@@ -9,7 +9,7 @@ const Designs: NextPage = () => {
   return (
     <Wrapper>
       <FirstColumn>
-        <Title>I also make some li'l designs!</Title>
+        <Title>I also make some li&apos;l designs!</Title>
         <StylizedButton mode="primary" as="a" href="https://www.behance.net/omarkhled" target="_blank">Explore my behance profile</StylizedButton>
       </FirstColumn>
       <SecondColumn>
