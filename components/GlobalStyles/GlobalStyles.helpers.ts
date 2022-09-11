@@ -9,8 +9,8 @@ import BREAKPOINTS from "@constants/breakpoints";
 const clamp = (
   min: number,
   max: number,
-  minBreakPoint: number = BREAKPOINTS.mobileStart,
-  maxBreakPoint: number = BREAKPOINTS.tabletStart
+  maxBreakPoint: number = BREAKPOINTS.tabletStart,
+  minBreakPoint: number = BREAKPOINTS.mobileStart
 ): string => {
   const viewportWidth: number =
     (100 * (max - min)) / (maxBreakPoint - minBreakPoint);

@@ -54,7 +54,6 @@ const Wrapper = styled.a<{ backgroundColor: string }>`
   padding: var(--padding) var(--padding) 0 var(--padding);
   overflow: hidden;
   position: relative;
-  width: fit-content;
   text-decoration: none;
   @media (hover: hover) and (pointer: fine) { 
     &:hover {

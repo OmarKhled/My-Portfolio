@@ -2,14 +2,14 @@ import Button from "@components/Button";
 import { clamp } from "@components/GlobalStyles/GlobalStyles.helpers";
 import { NextPage } from "next";
 import styled from "styled-components";
-import MouseScroll from "./MouseScroll";
+import MouseScroll from "./MouseScrollIcon";
 
 const Hero: NextPage = () => {
   return (
     <Wrapper>
       <Title>I Develop Things for the Web<Dot>.</Dot></Title>
       <Muted>Build • Develop • Ship</Muted>
-      <Button as="a" href="#">Get to know me more</Button>
+      <Button as="a" href="#" mode="primary">Get to know me more</Button>
       <MouseScrollIcon />
     </Wrapper>
   );

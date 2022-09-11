@@ -1,5 +1,4 @@
 import { NextPage } from "next";
-import React from "react";
 import styled from "styled-components";
 
 import projects from '@data/projects'
@@ -25,7 +24,7 @@ const Wrapper = styled.div`
         auto-fill,
         minmax(min(24.375rem, 100%), 1fr)
       );
-  margin-top: 2rem;
+  margin-top: 3rem;
 `
 
 export default ProjectsGrid;

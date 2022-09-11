@@ -1,25 +1,17 @@
-import { NextPage } from "next";
-import Link from "next/link";
-import React from "react";
 import styled from "styled-components";
 
-const StylizedLink: NextPage<{ href: string, children: React.ReactNode }> = ({ href, children, ...props }) => {
-  return (
-    <Link href={href} prefetch>
-      <AnchorTag {...props}>{children}</AnchorTag>
-    </Link>
-  );
-}
-
-const AnchorTag = styled.a`
-  --color: var(--primary);
+const LinkWrapper = styled.a<{ color: "standard" | "primary" }>`
+  --color: ${(p) => p.color === "standard" ? "var(--textColor)" : "var(--primary)"};
   color: var(--color);
   text-decoration: none;
-  transition: box-shadow 400ms ease, color 400ms ease;
-  will-change: box-shadow;
-  &:hover {
-    box-shadow: 0px 2px 0px var(--color)
+  transition: box-shadow 300ms ease;
+  @media (hover: hover) and (pointer: fine) { 
+    will-change: box-shadow;
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0px 3px 0px var(--color);
+    }
   }
 `
 
-export default StylizedLink;
+export default LinkWrapper;

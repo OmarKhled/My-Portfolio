@@ -1,16 +1,6 @@
-import { NextPage } from "next";
-import { ReactNode, useEffect, useState } from "react";
 import styled from "styled-components";
 
 type modeType = "primary" | "secondary";
-
-const Button: NextPage<{ mode?: modeType, children: ReactNode, [key: string]: any }> = ({ mode = "primary", children, ...props }) => {
-  return (
-    <Wrapper mode={mode}  {...props}>
-      {children}
-    </Wrapper>
-  );
-}
 
 const Wrapper = styled.button<{ mode: modeType }>`
   display: block;
@@ -37,4 +27,4 @@ const Wrapper = styled.button<{ mode: modeType }>`
   }
 `
 
-export default Button;
+export default Wrapper;

@@ -10,7 +10,7 @@ export default [
     backgroundColor: COLORS.royalBlue.default,
   },
   {
-    name: "DedMet Chrome Extension",
+    name: "DedMet Extension",
     avatarImg: "/images/projects/avatar/dedmet.webp",
     client: "DedMet",
     year: "2022",
@@ -18,7 +18,7 @@ export default [
     backgroundColor: COLORS.goldenYellow.default,
   },
   {
-    name: "IEEE NU Electronics Store",
+    name: "IEEE NU Store",
     avatarImg: "/images/projects/avatar/store.webp",
     client: "IEEE NU",
     year: "2020",

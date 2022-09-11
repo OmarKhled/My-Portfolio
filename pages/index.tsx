@@ -3,9 +3,14 @@ import Head from 'next/head'
 
 import Hero from '@components/Hero'
 import Marquee from '@components/Marquee'
-import ScrollComponent from '@components/PreviousWork'
+import PreviousWork from '@components/PreviousWork'
 import ProjectsGrid from '@components/ProjectsGrid'
 import styled from 'styled-components'
+import Designs from '@components/Designs'
+import Section from '@components/Section'
+import Button from '@components/Button'
+import StylizedLink from '@components/StylizedLink'
+import UsedTechnologies from '@components/UsedTechnologies'
 
 
 const Home: NextPage = () => {
@@ -13,28 +18,60 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title key={"title"}>Omar Khled</title>
-        <meta name="description" content="Omar Khled - Creative Frontend Developer" />
         <link rel="icon" href="/favicon.ico" />
+        <meta property="og:title" content="OmarKhled's Portfolio" />
+        <meta name="description" content="Omar Khled - Creative Frontend Developer" />
+        <meta property="og:url" content="https://omarkhled.me" />
+        <meta property="og:image" content="https://omarkhled.me/images/ogg.png" />
       </Head>
       <Hero />
-      <section style={{ marginTop: "5rem" }}>
+      <Section>
         <SectionTitle>Technologies I use</SectionTitle>
         <Marquee />
-      </section>
-      <ScrollComponent />
-
-      <section style={{ marginTop: "5rem" }}>
+      </Section>
+      <PreviousWork />
+      <Section>
         <SectionTitle>Selected Projects</SectionTitle>
         <ProjectsGrid />
-      </section>
-      <div style={{ height: "2000px" }}></div>
-
+      </Section>
+      <Section>
+        <Designs />
+      </Section>
+      <ApendixSection>
+        <div>
+          <SectionTitle>Contact Me</SectionTitle>
+          <p><StylizedLink color='primary' href="mailto: o.abuelfetohahmed@nu.edu.eg">o.abuelfetohahmed@nu.edu.eg</StylizedLink></p>
+        </div>
+        <ResumeWrapper>
+          <SectionTitle>Download My Full Resume</SectionTitle>
+          <Button mode="secondary" as="a" href="/pdfs/resume.pdf">Get My Resume</Button>
+        </ResumeWrapper>
+      </ApendixSection>
+      <Footer>
+        <UsedTechnologies />
+      </Footer>
     </>
   )
 }
 
 const SectionTitle = styled.h4`
   text-align: center;
+`
+const ApendixSection = styled(Section)`
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+`
+const ResumeWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+`
+const Footer = styled.footer`
+  margin-top: 3rem;
 `
 
 
