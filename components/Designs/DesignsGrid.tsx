@@ -33,19 +33,19 @@ const Component = styled.div`
 `
 const Component1 = styled(Component)`
   grid-area: area1;
-  background-image: url("https://picsum.photos/1000");
+  /* background-image: url("https://picsum.photos/1000"); */
 `
 const Component2 = styled(Component)`
   grid-area: area2;
-  background-image: url("https://picsum.photos/1001");
+  /* background-image: url("https://picsum.photos/1001"); */
 `
 const Component3 = styled(Component)`
   grid-area: area3;
-  background-image: url("https://picsum.photos/1002");
+  /* background-image: url("https://picsum.photos/1002"); */
 `
 const Component4 = styled(Component)`
   grid-area: area4;
-  background-image: url("https://picsum.photos/1003");
+  /* background-image: url("https://picsum.photos/1003"); */
 `
 
 export default DesignsGrid

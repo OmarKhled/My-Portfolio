@@ -26,7 +26,7 @@ const PreviousWork: NextPage = () => {
         </FirstColumn>
         <SecondColumn>
           <ScrollComponent scrollYProgress={scrollYProgress} />
-          <PreviousProjects src="/images/previousProjects.webp" />
+          <PreviousProjects src="/images/previousProjects.webp" alt="Previous Projects"/>
         </SecondColumn>
       </Wrapper>
     </>

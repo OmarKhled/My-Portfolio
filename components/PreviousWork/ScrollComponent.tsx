@@ -23,9 +23,10 @@ const ScrollComponent: NextPage<{ scrollYProgress: any }> = ({ scrollYProgress }
     }
   }, [])
 
+  let trigger = imgRef.current?.getBoundingClientRect().height
   useEffect(() => {
     setHeight(imgRef.current?.getBoundingClientRect().height as number);
-  }, [imgRef.current?.getBoundingClientRect().height]);
+  }, [trigger]);
 
   const firstImage = useSpring({ 
     transform: `scale(${1.1 - useTransform(scrollYProgress, [0, 0.3, 0.35, 0.6, 1], [0, 0.1, 0.1, 0.22, 0.22]).get()})`,

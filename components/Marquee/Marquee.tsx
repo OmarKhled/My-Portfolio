@@ -67,7 +67,7 @@ const MarqueeContent = styled.ul`
   animation: ${scroll} 45s linear infinite;
 `
 
-const MarqueeElement = styled.div`
+const MarqueeElement = styled.li`
   /* background-color: #4a455f47; */
   padding: 2rem 4rem;
   /* border-radius: 8px; */

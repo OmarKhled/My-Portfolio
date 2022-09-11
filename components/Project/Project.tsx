@@ -29,7 +29,7 @@ const Project: NextPage<{
           <Client>{client}</Client>
           <Year>{year}</Year>
         </Metadata>
-        <Avatar src={avatarImg} />
+        <Avatar src={avatarImg} alt={`${name} avatar`}/>
       </Wrapper>
     </Link>
   );

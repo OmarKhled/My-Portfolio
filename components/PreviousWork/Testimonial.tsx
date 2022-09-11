@@ -5,7 +5,7 @@ const Testimonial = ({ name = "Youssef Nasser", job = "Project Manger at Nilepre
   return (
     <Wrapper>
       <Profile>
-        <ProfileImage src={img} />
+        <ProfileImage src={img} alt={`${name} Image`}/>
         <div>
           <Name>{name}</Name>
           <Job>{job}</Job>
