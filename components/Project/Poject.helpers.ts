@@ -36,7 +36,7 @@ const getAppropriateColor = (
   COLORS_ARRAY.forEach((color) => {
     // const colorRatio = rgb(color, rgbBg);
     const colorRatio = APCAcontrast(sRGBtoY(color), sRGBtoY(rgbBg));
-    if (mode === "primary") console.log(colorRatio);
+    // if (mode === "primary") console.log(colorRatio);
 
     if (Math.abs(colorRatio as number) > Math.abs(contrastRatio as number)) {
       contrastRatio = colorRatio;
