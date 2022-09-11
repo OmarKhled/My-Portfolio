@@ -22,40 +22,44 @@ const Project: NextPage<{
   backgroundColor= COLORS.royalBlue.default
 }) => {
   return (
-    <Wrapper backgroundColor={backgroundColor}>
-      <Title><Link href={link} passHref ><TitleLink target={"_blank"}>{name}</TitleLink></Link></Title>
-      <Metadata>
-        <Client>{client}</Client>
-        <Year>{year}</Year>
-      </Metadata>
-      <Avatar src={avatarImg} />
-    </Wrapper>
+    <Link href={link} passHref>
+      <Wrapper target={"_blank"} backgroundColor={backgroundColor}>
+        <Title>{name}</Title>
+        <Metadata>
+          <Client>{client}</Client>
+          <Year>{year}</Year>
+        </Metadata>
+        <Avatar src={avatarImg} />
+      </Wrapper>
+    </Link>
   );
 }
 
-const TitleLink = styled.a`
-  color: inherit;
-  text-decoration: none;
+const Title = styled.h5`
+  color: var(--titleColor);
   will-change: box-shadow;
   transition: box-shadow 300ms ease;
+  width: fit-content;
+  line-height: initial;
 `
-const Wrapper = styled.div<{ backgroundColor: string }>`
+const Wrapper = styled.a<{ backgroundColor: string }>`
   --bg: ${(p) => p.backgroundColor};
   --titleColor: ${(p) => getAppropiateColor(p.backgroundColor, "primary")};
   --mutedColor: ${(p) => getAppropiateColor(p.backgroundColor, "secondary")};
   --padding: ${clamp(22, 45)};
 
+  display: block;
   background-color: var(--bg);
   border-radius: ${clamp(15, 25)};
   padding: var(--padding) var(--padding) 0 var(--padding);
   overflow: hidden;
   position: relative;
-  /* max-width: 29.375rem; */
   width: fit-content;
+  text-decoration: none;
   @media (hover: hover) and (pointer: fine) { 
     &:hover {
       cursor: pointer;
-      ${TitleLink} {
+      ${Title} {
         box-shadow: 0px 3px 0px var(--titleColor);
       }
     }
@@ -63,12 +67,9 @@ const Wrapper = styled.div<{ backgroundColor: string }>`
 `
 const Metadata = styled.div`
   @media (hover: hover) and (pointer: fine) { 
-    margin-top: 0.2rem;
+    margin-top: 0.3rem;
   }
   display: flex;
-`
-const Title = styled.h5`
-  color: var(--titleColor);
 `
 const Muted = styled.p`
   color: var(--mutedColor);

@@ -1,5 +1,5 @@
 import { NextPage } from 'next'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import { useTransform, useScroll } from 'framer-motion'
 import { animated, useSpring } from 'react-spring'
@@ -8,6 +8,7 @@ import { QUERIES } from '@constants/breakpoints'
 
 const ScrollComponent: NextPage<{ scrollYProgress: any }> = ({ scrollYProgress }) => {
   const imgRef = useRef<HTMLImageElement>(null);
+  const [height, setHeight] = useState<number>(imgRef.current?.getBoundingClientRect().height as number)
 
   useEffect(() => {
     scrollYProgress.onChange((l: any) => {
@@ -16,6 +17,15 @@ const ScrollComponent: NextPage<{ scrollYProgress: any }> = ({ scrollYProgress }
     console.log(imgRef);
   }, [scrollYProgress]);
 
+  useEffect(() => {
+    window.onresize = () => {
+      setHeight(imgRef.current?.getBoundingClientRect().height as number);
+    }
+  }, [])
+
+  useEffect(() => {
+    setHeight(imgRef.current?.getBoundingClientRect().height as number);
+  }, [imgRef.current?.getBoundingClientRect().height]);
 
   const firstImage = useSpring({ 
     transform: `scale(${1.1 - useTransform(scrollYProgress, [0, 0.3, 0.35, 0.6, 1], [0, 0.1, 0.1, 0.22, 0.22]).get()})`,
@@ -30,7 +40,7 @@ const ScrollComponent: NextPage<{ scrollYProgress: any }> = ({ scrollYProgress }
   })
 
   return (
-    <ScrollWrapper height={imgRef.current?.getBoundingClientRect().height as number}>
+    <ScrollWrapper height={height}>
       <FirstImage style={firstImage} src="/images/projects/screenshots/ieeenu.png" />
       <SecondImage style={secondImage} src="/images/projects/screenshots/ieeestore.png" />
       <ThirdImage ref={imgRef} style={thirdImage} src="/images/projects/screenshots/dedmet.png" />
