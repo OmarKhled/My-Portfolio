@@ -4,7 +4,7 @@ import { NextPage } from "next";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
-import getTextColor from "./Poject.helpers";
+import getAppropiateColor from "./Poject.helpers";
 
 const Project: NextPage<{ 
   link?: string,
@@ -19,11 +19,11 @@ const Project: NextPage<{
   avatarImg= "/images/projects/avatar/ieeenu.webp", 
   client = "IEEE NU", 
   year = "2022",
-  backgroundColor= COLORS.goldenYellow.default
+  backgroundColor= COLORS.royalBlue.default
 }) => {
   return (
     <Wrapper backgroundColor={backgroundColor}>
-      <Title backgroundColor={backgroundColor}><Link href={link} passHref ><TitleLink target={"_blank"}>{name}</TitleLink></Link></Title>
+      <Title><Link href={link} passHref ><TitleLink target={"_blank"}>{name}</TitleLink></Link></Title>
       <Metadata>
         <Client>{client}</Client>
         <Year>{year}</Year>
@@ -40,19 +40,23 @@ const TitleLink = styled.a`
   transition: box-shadow 300ms ease;
 `
 const Wrapper = styled.div<{ backgroundColor: string }>`
+  --bg: ${(p) => p.backgroundColor};
+  --titleColor: ${(p) => getAppropiateColor(p.backgroundColor, "primary")};
+  --mutedColor: ${(p) => getAppropiateColor(p.backgroundColor, "secondary")};
   --padding: ${clamp(22, 45)};
-  background-color: ${(p) => p.backgroundColor};
+
+  background-color: var(--bg);
   border-radius: ${clamp(15, 25)};
   padding: var(--padding) var(--padding) 0 var(--padding);
   overflow: hidden;
   position: relative;
-  max-width: 29.375rem;
+  /* max-width: 29.375rem; */
   width: fit-content;
   @media (hover: hover) and (pointer: fine) { 
     &:hover {
       cursor: pointer;
       ${TitleLink} {
-        box-shadow: 0px 3px 0px ${(p) => getTextColor(p.backgroundColor)};
+        box-shadow: 0px 3px 0px var(--titleColor);
       }
     }
   }
@@ -63,11 +67,11 @@ const Metadata = styled.div`
   }
   display: flex;
 `
-const Title = styled.h5<{ backgroundColor: string }>`
-  color: ${(p) => getTextColor(p.backgroundColor)};
+const Title = styled.h5`
+  color: var(--titleColor);
 `
 const Muted = styled.p`
-  color: var(--grey-350);
+  color: var(--mutedColor);
   font-weight: 600;
 `
 const Client = styled(Muted)`

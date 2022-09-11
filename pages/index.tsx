@@ -2,6 +2,7 @@ import Hero from '@components/Hero'
 import Marquee from '@components/Marquee'
 import ScrollComponent from '@components/PreviousWork'
 import Project from '@components/Project'
+import COLORS from '@constants/colors'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import styled from 'styled-components'
@@ -25,6 +26,12 @@ const Home: NextPage = () => {
         <h4 style={{ textAlign: "center", marginBottom: "3rem" }}>Selected Projects</h4>
         <ProjectsWrapper>
           <Project />
+          <Project backgroundColor={COLORS.goldenYellow.default}/>
+          <Project backgroundColor={COLORS.hotPink.default}/>
+          <Project backgroundColor={COLORS.butterflyBlue.default}/>
+          <Project backgroundColor={COLORS.violetEggplant.default}/>
+          <Project backgroundColor={COLORS.spunPearl.default}/>
+          <Project backgroundColor={COLORS.blackRock.default}/>
 
         </ProjectsWrapper>
       </section>
@@ -35,10 +42,10 @@ const Home: NextPage = () => {
 }
 
 const ProjectsWrapper = styled.div`
-  /* display: grid;
-  gap: 16px;
+  display: grid;
+  gap: 32px;
   grid-template-columns:
-    repeat(auto-fill, 26.375rem); */
+      repeat(auto-fill, minmax(23.375rem, 1fr));
 `
 
 
