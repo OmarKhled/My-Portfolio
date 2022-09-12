@@ -21,6 +21,7 @@ const St0 = styled.path`
   fill: var(--background);
   stroke:var(--textColor);
   stroke-width:20;
+  transition: fill 500ms ease, stroke 500ms ease;
 `
 const wiggle = keyframes`
   0% {
