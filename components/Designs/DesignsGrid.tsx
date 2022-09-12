@@ -26,26 +26,30 @@ const Wrapper = styled.div`
   gap: ${clamp(16, 32)};
 `
 const Component = styled.div`
-  background-color: red;
+  background-color: var(--primary);
   height: 100%;
   border-radius: 7px;
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
 `
 const Component1 = styled(Component)`
   grid-area: area1;
-  /* background-image: url("https://picsum.photos/1000"); */
+  background-image: url("/images/designs/cover-2.webp");
+  
 `
 const Component2 = styled(Component)`
   grid-area: area2;
-  /* background-image: url("https://picsum.photos/1001"); */
+  background-image: url("/images/designs/tall.webp");
 `
 const Component3 = styled(Component)`
   grid-area: area3;
-  /* background-image: url("https://picsum.photos/1002"); */
+  background-image: url("/images/designs/square.webp");
 `
 const Component4 = styled(Component)`
   grid-area: area4;
-  /* background-image: url("https://picsum.photos/1003"); */
+  background-image: url("/images/designs/square-2.webp");
 `
 
 export default DesignsGrid
