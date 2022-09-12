@@ -42,9 +42,9 @@ const ScrollComponent: NextPage<{ scrollYProgress: any }> = ({ scrollYProgress }
 
   return (
     <ScrollWrapper height={height}>
-      <FirstImage style={firstImage} src="/images/projects/screenshots/ieeenu.png" />
-      <SecondImage style={secondImage} src="/images/projects/screenshots/ieeestore.png" />
-      <ThirdImage ref={imgRef} style={thirdImage} src="/images/projects/screenshots/dedmet.png" />
+      <FirstImage style={firstImage} aria-hidden="true" src="/images/projects/screenshots/ieeenu.png" />
+      <SecondImage style={secondImage} aria-hidden="true" src="/images/projects/screenshots/ieeestore.png" />
+      <ThirdImage ref={imgRef} aria-hidden="true" style={thirdImage} src="/images/projects/screenshots/dedmet.png" />
     </ScrollWrapper>
   )
 }
