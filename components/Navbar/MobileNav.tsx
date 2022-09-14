@@ -6,9 +6,10 @@ import { useRouter } from 'next/router'
 import { AiFillGithub, AiOutlineBehance } from 'react-icons/ai'
 import styled from 'styled-components'
 
+import IconWrapper from '@components/IconWrapper'
 import { clamp } from '@components/GlobalStyles/GlobalStyles.helpers'
 import { QUERIES } from '@constants/breakpoints'
-import { NavLink, IconWrapper, ThemeToggleIcon } from './Navbar'
+import { NavLink, ThemeToggleIcon } from './Navbar'
 
 
 const MobileNav: NextPage<{ open: boolean, setOpen: (v: boolean) => void }> = ({ open, setOpen }) => {

@@ -8,13 +8,15 @@ import getAppropiateColor from "./Poject.helpers";
 
 const Project: NextPage<{ 
   link?: string,
+  slug: string,
   name?: string,
   avatarImg?: string,
   client?: string,
   year?: string | number,
   backgroundColor?: string
 }> = ({ 
-  link = "https://ieeenu.com", 
+  link = "https://ieeenu.com",
+  slug = "ieee-nu", 
   name = "IEEE NU Website", 
   avatarImg= "/images/projects/avatar/ieeenu.webp", 
   client = "IEEE NU", 
@@ -22,8 +24,8 @@ const Project: NextPage<{
   backgroundColor= COLORS.royalBlue.default
 }) => {
   return (
-    <Link href={link} passHref>
-      <Wrapper target={"_blank"} backgroundColor={backgroundColor}>
+    <Link href={`/project/${slug}`} passHref>
+      <Wrapper backgroundColor={backgroundColor}>
         <Title>{name}</Title>
         <Metadata>
           <Client>{client}</Client>
