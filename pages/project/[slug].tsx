@@ -20,12 +20,16 @@ interface Props {
   frontMatter: { [key: string]: string }
 }
 
-const H2 = styled.h4`
+const Heading2 = styled.h4`
   color: var(--tertiary);
-  margin: 0.9rem 0 0.7rem 0;
+  margin: 0 0 0rem 0;
+`
+const Paragraph = styled.p`
+  text-align: justify;
+  margin: 20px 0;
 `
 
-const components = { h4: (props: any) =>  <H2 {...props} />, a: (props: any) => <StylizedLink target={"_blank"} {...props} />, VideoPlayer}
+const components = { h4: (props: any) =>  <Heading2 {...props} />, a: (props: any) => <StylizedLink target={"_blank"} {...props} />, VideoPlayer, p: (props: any) => <Paragraph {...props} />}
 
 const Project: NextPage<Props> = ({ source, frontMatter }) => {
   const { name } = frontMatter;
@@ -77,11 +81,11 @@ const PreviewImage = styled.img`
 
 export const getStaticProps = async ({ params }: { params: { slug: string } }) => {
   const { slug } = params;
-  console.log(slug);
+  // console.log(slug);
   const source = getFileData(slug);
   const { content, data } = matter(source as string);
   const mdxSource = await serialize(content);
-  console.log(data);
+  // console.log(data);
   return {
     props: {
       source: mdxSource,
@@ -91,7 +95,7 @@ export const getStaticProps = async ({ params }: { params: { slug: string } }) =
 }
 export const getStaticPaths = () => {
   const paths = getPaths();
-  console.log(paths);
+  // console.log(paths);
   return {
     paths,
     fallback: false
