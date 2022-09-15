@@ -11,6 +11,7 @@ import Section from '@components/Section'
 import Button from '@components/Button'
 import StylizedLink from '@components/StylizedLink'
 import UsedTechnologies from '@components/UsedTechnologies'
+import Footer from '@components/Footer'
 
 
 const Home: NextPage = () => {
@@ -47,9 +48,7 @@ const Home: NextPage = () => {
           <Button mode="secondary" as="a" href="/pdfs/resume.pdf">Get My Resume</Button>
         </ResumeWrapper>
       </ApendixSection>
-      <Footer>
-        <UsedTechnologies />
-      </Footer>
+      <Footer />
     </>
   )
 }
@@ -70,9 +69,7 @@ const ResumeWrapper = styled.div`
   align-items: center;
   gap: 1rem;
 `
-const Footer = styled.footer`
-  margin-top: 3rem;
-`
+
 
 
 export default Home

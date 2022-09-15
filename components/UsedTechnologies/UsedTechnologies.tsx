@@ -40,6 +40,7 @@ const NextJsLogoIcon = styled(NextJsLogo)`
 `
 const VercelLogoIcon = styled(VercelLogo)`
   fill: var(--textColor);
+  scale: 1.2;
 `
 
 export default UsedTechnologies;

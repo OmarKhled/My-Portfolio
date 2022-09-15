@@ -14,7 +14,6 @@ const BrowserHeader = () => {
           <Address>ieeenu.com</Address>
         </AddressBar>
       </Wrapper>
-      <Preview src="/images/projects/screenshots/ieeenu.png" />
     </>
   )
 }
@@ -72,8 +71,6 @@ const Address = styled.small`
   font-weight: 600;
   line-height: initial;
 `
-const Preview = styled.img`
-  width: 100%
-`
+
 
 export default BrowserHeader
