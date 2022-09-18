@@ -6,17 +6,26 @@ client: "IEEE NU"
 year: "2022"
 link: "https://ieeenu.com"
 backgroundColor: COLORS.royalBlue.default
+previewImage: "/images/projects/screenshots/ieeenu.png"
 ---
 
-#### Problem Overview
+#### Project Purposes and Goals
 
-[IEEE NU](https://ieeenu.com) is a student activity in Nile University - the university I'm currently studying in - and they needed a website that can represent them online and hold the forms for thier annual events like the [Egyptian Space Summit](https://ieeenu.com/spacesummit), they did have a solid React based website but that had neither good UI nor performane or seo and that didn't satisfy them.
+[IEEE NU](https://ieeenu.com), a student activity in Nile University wanted to replace thier old website with a new one that can represent them online and hold the forms and registration processes for thier annual events like the [Egyptian Space Summit](https://ieenu.com/spacesummit), they also had in mind participating with this new website in the [IEEE student branch website contest](https://students.ieee.org/student-opportunities/sac-awards-programs/ieee-student-branch-website-contest/).
 
-<VideoPlayer loop autoPlay="autoplay" muted caption="IEEE NU's previous website">
+<VideoPlayer loop autoPlay="autoplay" muted caption="IEEE NU's previous website" playsInline>
   <source src="/videos/projects/legacy-ieeenu.webm" type="video/webm" />
   <source src="/videos/projects/legacy-ieeenu.mp4" type="video/mp4" />
 </VideoPlayer>
 
-They also planned on participating with this website in the [IEEE student branch website contest](https://students.ieee.org/student-opportunities/sac-awards-programs/ieee-student-branch-website-contest/) so, we had that contest in mind too. 
+#### Web stack and explanation
 
-#### Solution and technologies
+As it was intended to be mostly a static website, so, I went with nextjs as a framework and a static site generator. I choosed firestore as a database option for the website to hold the data of the forms and determined to have some 3d interactive elements on the website using [threejs](https://threejs.org). 
+
+The design and the structure of the website considered the newest SEO patterns by using structured data to provide info about each page to the search engine scrappers.
+
+The styling however was done using several global scss stylesheets that followed the UI Design I created earlier on Adobe XD, the design followed the structure of the other IEEE SBs websites to provide a good user experience and avoid confusion, nevertheless the new design introuduced new sections like the recruitment page that introduces those who are willing to volunteer with info about the SB and a form to sign up and a section about the SB's annual megaevent, the
+[Egyptian Space Summit](https://ieenu.com/spacesummit) which gives an info about the event, the prizes, previous speakers, ...etc
+
+<img src="/images/projects/ui_designs.png" />
+

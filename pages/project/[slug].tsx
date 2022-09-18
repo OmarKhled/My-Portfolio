@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { NextPage } from 'next/types'
 import styled from 'styled-components'
 import { AiFillGithub } from 'react-icons/ai'
@@ -13,7 +14,6 @@ import VideoPlayer from '@components/VideoPlayer'
 import BrowserHeader from '@components/BrowserHeader'
 import StylizedLink from '@components/StylizedLink'
 import Footer from '@components/Footer'
-import Head from 'next/head'
 
 interface Props {
   source: MDXRemoteSerializeResult,
@@ -26,13 +26,13 @@ const Heading2 = styled.h4`
 `
 const Paragraph = styled.p`
   text-align: justify;
-  margin: 20px 0;
+  margin: 15px 0;
 `
 
 const components = { h4: (props: any) =>  <Heading2 {...props} />, a: (props: any) => <StylizedLink target={"_blank"} {...props} />, VideoPlayer, p: (props: any) => <Paragraph {...props} />}
 
 const Project: NextPage<Props> = ({ source, frontMatter }) => {
-  const { name } = frontMatter;
+  const { name, previewImage, link, githubLink } = frontMatter;
   return (
     <>
       <Head>
@@ -42,17 +42,25 @@ const Project: NextPage<Props> = ({ source, frontMatter }) => {
       <Wrapper>
         <Title>{name}</Title>
         <ProjectLinks>
-          <IconWrapper as="a" href="https://github.com/omarkhled/ieee-nu" target="_blank">
-            <AiFillGithub />
-          </IconWrapper>
-          <IconWrapper as="a" href="https://ieeenu.com" target="_blank">
-            <BiLink />
-          </IconWrapper>
+          {
+            githubLink && (
+              <IconWrapper as="a" href={githubLink} target="_blank">
+                <AiFillGithub />
+              </IconWrapper>
+            )
+          }
+          {
+            link && (
+              <IconWrapper as="a" href={link} target="_blank">
+                <BiLink />
+              </IconWrapper>
+            )
+          }
         </ProjectLinks>
         <br />
         <PreviewWrapper>
           <BrowserHeader />
-          <PreviewImage src="/images/projects/screenshots/ieeenu.png" alt={name}/>
+          <PreviewImage src={previewImage} alt={name}/>
         </PreviewWrapper>
         <MDXRemote {...source} components={components} />
         <Footer />
