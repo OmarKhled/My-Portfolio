@@ -24,7 +24,7 @@ const Project: NextPage<{
   backgroundColor= COLORS.royalBlue.default
 }) => {
   return (
-    <Link href={`/project/${slug}`} passHref>
+    <Link href={`/projects/${slug}`} passHref>
       <Wrapper backgroundColor={backgroundColor}>
         <Title>{name}</Title>
         <Metadata>

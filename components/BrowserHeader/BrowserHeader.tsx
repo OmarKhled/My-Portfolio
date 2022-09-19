@@ -1,7 +1,7 @@
 import { clamp } from "@components/GlobalStyles/GlobalStyles.helpers"
 import styled from "styled-components"
 
-const BrowserHeader = () => {
+const BrowserHeader = ({ link = "ieeenu.com" }: { link: string }) => {
   return (
     <>
       <Wrapper>
@@ -11,7 +11,7 @@ const BrowserHeader = () => {
           <MenimizeButton />
         </NavButtons>
         <AddressBar>
-          <Address>ieeenu.com</Address>
+          <Address>{link}</Address>
         </AddressBar>
       </Wrapper>
     </>

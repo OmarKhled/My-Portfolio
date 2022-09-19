@@ -14,6 +14,7 @@ import VideoPlayer from '@components/VideoPlayer'
 import BrowserHeader from '@components/BrowserHeader'
 import StylizedLink from '@components/StylizedLink'
 import Footer from '@components/Footer'
+import ImageFrame from "@components/ImageFrame"
 
 interface Props {
   source: MDXRemoteSerializeResult,
@@ -29,7 +30,7 @@ const Paragraph = styled.p`
   margin: 15px 0;
 `
 
-const components = { h4: (props: any) =>  <Heading2 {...props} />, a: (props: any) => <StylizedLink target={"_blank"} {...props} />, VideoPlayer, p: (props: any) => <Paragraph {...props} />}
+const components = { h4: (props: any) =>  <Heading2 {...props} />, a: (props: any) => <StylizedLink target={"_blank"} {...props} />, VideoPlayer, p: (props: any) => <Paragraph {...props} />, ImageFrame}
 
 const Project: NextPage<Props> = ({ source, frontMatter }) => {
   const { name, previewImage, link, githubLink } = frontMatter;
@@ -59,7 +60,7 @@ const Project: NextPage<Props> = ({ source, frontMatter }) => {
         </ProjectLinks>
         <br />
         <PreviewWrapper>
-          <BrowserHeader />
+          <BrowserHeader link={link.split("//")[1]} />
           <PreviewImage src={previewImage} alt={name}/>
         </PreviewWrapper>
         <MDXRemote {...source} components={components} />
@@ -69,7 +70,9 @@ const Project: NextPage<Props> = ({ source, frontMatter }) => {
   )
 }
 const Wrapper = styled.div`
+  margin: 0 auto;
   margin-top: ${clamp(50, 60)};
+  max-width: 1000px;
 `
 const Title = styled.h2`
   text-align: center;
@@ -85,6 +88,8 @@ const PreviewWrapper = styled.div`
 `
 const PreviewImage = styled.img`
   width: 100%;
+  border: hsl(200, 1%, 40%) solid 1px;
+  border-top: none;
 `
 
 export const getStaticProps = async ({ params }: { params: { slug: string } }) => {

@@ -1,11 +1,7 @@
 ---
 name: "IEEE NU Website"
 slug: "ieee-nu"
-avatarImg: "/images/projects/avatar/ieeenu.webp"
-client: "IEEE NU"
-year: "2022"
 link: "https://ieeenu.com"
-backgroundColor: COLORS.royalBlue.default
 previewImage: "/images/projects/screenshots/ieeenu.png"
 ---
 
@@ -22,10 +18,24 @@ previewImage: "/images/projects/screenshots/ieeenu.png"
 
 As it was intended to be mostly a static website, so, I went with nextjs as a framework and a static site generator. I choosed firestore as a database option for the website to hold the data of the forms and determined to have some 3d interactive elements on the website using [threejs](https://threejs.org). 
 
-The design and the structure of the website considered the newest SEO patterns by using structured data to provide info about each page to the search engine scrappers.
+The design and the structure of the website considered the newest SEO patterns by using structured data to provide info about each page to the search engine scrappers. These decisions resulted in getting the first result on google in mostly all the keywords related to IEEE NU SB or thier annaul event the egyptian space summit.
 
-The styling however was done using several global scss stylesheets that followed the UI Design I created earlier on Adobe XD, the design followed the structure of the other IEEE SBs websites to provide a good user experience and avoid confusion, nevertheless the new design introuduced new sections like the recruitment page that introduces those who are willing to volunteer with info about the SB and a form to sign up and a section about the SB's annual megaevent, the
-[Egyptian Space Summit](https://ieenu.com/spacesummit) which gives an info about the event, the prizes, previous speakers, ...etc
+The styling however was done using several global scss stylesheets that followed the UI Design I created earlier on Adobe XD, the design followed the structure of the other IEEE SBs websites to provide a good user experience and avoid confusion, nevertheless the new design introuduced several new sections like the recruitment page that introduces those who are willing to volunteer with info about the SB and a form to sign up and other sections.
 
-<img src="/images/projects/ui_designs.png" />
+<picture>
+  <source srcset="/images/projects/ui_designs.webp" type="image/webp" />
+  <img src="/images/projects/ui_designs.png" alt="A description of the image." loading="lazy" decoding="async" />
+</picture>
 
+A design decision was taken by including a 3d interactive element to each hero section on each page. Those 3d element was created using bender and exported in a compressed glb format to suit the slow network connections.
+
+{/*  Remember to include some examples of the 3d models here */}
+
+#### Results and Conclusion
+
+<picture>
+  <source srcset="/images/projects/snapshots/i.avif" type="image/avif" />
+  <ImageFrame src="/images/projects/snapshots/i.png" alt="A description of the image." loading="lazy" decoding="async" caption="Lighthouse's analysis of the website" />
+</picture>
+
+Putting into considration the performance of the website, all the images used was in nextgen format (either webp or avif) and such a decision raised the performance of the website by about 50%.
