@@ -71,11 +71,11 @@ const MarqueeContent = styled.ul<{ anim: boolean }>`
   justify-content: space-around;
   min-width: 100%;
   gap: var(--gap);
-  animation: ${ p => p.anim ? scroll : ""} 15s linear infinite;
+  animation: ${ p => p.anim ? scroll : ""} 25s linear infinite;
 `
 
 const MarqueeElement = styled.li`
-  /* background-color: #4a455f47; */
+  /* background-color: #4a455f0; */
   padding: 2rem 3rem;
   display: flex;
   justify-content: center;
