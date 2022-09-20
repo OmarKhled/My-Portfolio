@@ -8,7 +8,6 @@ import getAppropiateColor from "./Poject.helpers";
 
 const Project: NextPage<{ 
   link?: string,
-  slug: string,
   name?: string,
   avatarImg?: string,
   client?: string,
