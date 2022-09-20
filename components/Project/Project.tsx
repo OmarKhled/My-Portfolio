@@ -15,8 +15,7 @@ const Project: NextPage<{
   year?: string | number,
   backgroundColor?: string
 }> = ({ 
-  link = "https://ieeenu.com",
-  slug = "ieee-nu", 
+  link = "/projects/ieee-nu",
   name = "IEEE NU Website", 
   avatarImg= "/images/projects/avatar/ieeenu.webp", 
   client = "IEEE NU", 
@@ -24,8 +23,8 @@ const Project: NextPage<{
   backgroundColor= COLORS.royalBlue.default
 }) => {
   return (
-    <Link href={`/projects/${slug}`} passHref>
-      <Wrapper backgroundColor={backgroundColor}>
+    <Link href={link} passHref>
+      <Wrapper target={link.includes("//") ? "_blank" : "_self"} backgroundColor={backgroundColor}>
         <Title>{name}</Title>
         <Metadata>
           <Client>{client}</Client>

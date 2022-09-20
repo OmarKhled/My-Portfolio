@@ -1,31 +1,38 @@
 import { NextPage } from "next";
+import { useState } from "react"
 import styled, { keyframes } from "styled-components";
-import { FaReact, FaChrome } from "react-icons/fa"
-import { SiTypescript } from "react-icons/si"
-import { TbBrandNextjs } from "react-icons/tb"
+import Icon from "@components/Icon";
+import Button from "@components/Button";
+
+const Icons = () => (
+  <>
+    <MarqueeElement><Icon icon="react" /></MarqueeElement>
+    <MarqueeElement ><Icon icon="next" /></MarqueeElement>
+    <MarqueeElement><Icon icon="spring" /></MarqueeElement>
+    <MarqueeElement><Icon icon="mdx" /></MarqueeElement>
+    <MarqueeElement><Icon icon="ts" /></MarqueeElement>
+    <MarqueeElement><Icon icon="md" /></MarqueeElement>
+    <MarqueeElement><Icon icon="threejs" /></MarqueeElement>
+    <MarqueeElement><Icon icon="webgl" /></MarqueeElement>
+    <MarqueeElement><Icon icon="vercel" /></MarqueeElement>
+    <MarqueeElement><Icon icon="framer" /></MarqueeElement>
+    <MarqueeElement><Icon icon="firebase" /></MarqueeElement>
+  </>
+);
 
 const Marquee: NextPage = () => {
+  const [animation, setAnimation] = useState(true)
   return (
-    <Wrapper>
-      <MarqueeContent>
-        <MarqueeElement><FaReact /></MarqueeElement>
-        <MarqueeElement><FaChrome /></MarqueeElement>
-        <MarqueeElement><SiTypescript /></MarqueeElement>
-        <MarqueeElement><TbBrandNextjs /></MarqueeElement>
-        <MarqueeElement><FaChrome /></MarqueeElement>
-        <MarqueeElement><SiTypescript /></MarqueeElement>
-        <MarqueeElement><TbBrandNextjs /></MarqueeElement>
-      </MarqueeContent>
-      <MarqueeContent aria-hidden="true">
-        <MarqueeElement><FaReact /></MarqueeElement>
-        <MarqueeElement><FaChrome /></MarqueeElement>
-        <MarqueeElement><SiTypescript /></MarqueeElement>
-        <MarqueeElement><TbBrandNextjs /></MarqueeElement>
-        <MarqueeElement><FaChrome /></MarqueeElement>
-        <MarqueeElement><SiTypescript /></MarqueeElement>
-        <MarqueeElement><TbBrandNextjs /></MarqueeElement>
-      </MarqueeContent>
-    </Wrapper>
+    <>
+      <Wrapper>
+        <MarqueeContent anim={animation}>
+          <Icons />
+        </MarqueeContent>
+        <MarqueeContent aria-hidden="true" anim={animation}>
+          <Icons />
+        </MarqueeContent>
+      </Wrapper>
+    </>
   );
 }
 
@@ -56,7 +63,7 @@ const scroll = keyframes`
     transform: translateX(calc(-100% - var(--gap)));
   }
 `
-const MarqueeContent = styled.ul`
+const MarqueeContent = styled.ul<{ anim: boolean }>`
   padding: 0;
   list-style: none;
   flex-shrink: 0;
@@ -64,19 +71,20 @@ const MarqueeContent = styled.ul`
   justify-content: space-around;
   min-width: 100%;
   gap: var(--gap);
-  animation: ${scroll} 45s linear infinite;
+  animation: ${ p => p.anim ? scroll : ""} 15s linear infinite;
 `
 
 const MarqueeElement = styled.li`
   /* background-color: #4a455f47; */
-  padding: 2rem 4rem;
-  /* border-radius: 8px; */
-  /* box-shadow: 0 0 7px 1px var(--background-300); */
-  --size: 3rem;
+  padding: 2rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   & svg {
-    opacity: 0.7;
-    width: var(--size);
-    height: var(--size);
+    opacity: 1;
+    /* width: var(--size);
+    height: var(--size); */
+    filter: brightness(110%);
   }
 `
 
