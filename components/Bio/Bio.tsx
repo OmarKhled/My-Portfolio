@@ -35,8 +35,11 @@ const Wrapper = styled.section`
   }
 `
 const FirstColumn = styled.div`
-  width: 20rem;
-  flex-shrink: 0;
+  width: min(100%, 20rem);
+  @media ${QUERIES.tabletAndUp} {
+    flex-shrink: 0;
+  }
+  
 `
 const Image = styled.img`
   
