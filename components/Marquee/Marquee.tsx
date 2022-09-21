@@ -84,7 +84,7 @@ const MarqueeElement = styled.li`
     opacity: 1;
     /* width: var(--size);
     height: var(--size); */
-    filter: brightness(110%);
+    filter: brightness(115%);
   }
 `
 

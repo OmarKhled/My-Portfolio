@@ -1,10 +1,19 @@
 import { NextPage } from 'next'
-import React from 'react'
+import Bio from '@components/Bio'
+import Footer from '@components/Footer'
+import styled from 'styled-components'
 
 const About: NextPage = () => {
   return (
-    <div>About</div>
+    <>
+      <Bio />
+    </>
   )
 }
+
+const FooterWrapper = styled.div`
+  
+`
+
 
 export default About
