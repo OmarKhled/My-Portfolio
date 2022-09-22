@@ -24,7 +24,7 @@ const Marquee: NextPage = () => {
   const [animation, setAnimation] = useState(true)
   return (
     <>
-      <Wrapper>
+      <Wrapper id="marquee">
         <MarqueeContent anim={animation}>
           <Icons />
         </MarqueeContent>

@@ -20,7 +20,7 @@ const PreviousWork: NextPage = () => {
   }, [scrollYProgress]);
   return (
     <>
-      <Wrapper ref={ref}>
+      <Wrapper ref={ref} id="previos-work">
         <FirstColumn>
           <Details />
         </FirstColumn>

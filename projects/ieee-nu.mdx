@@ -7,7 +7,7 @@ previewImage: "/images/projects/screenshots/ieeenu.png"
 
 #### Project Purposes and Goals
 
-[IEEE NU](https://ieeenu.com), a student activity in Nile University wanted to replace thier old website with a new one that can represent them online and hold the forms and registration processes for thier annual events like the [Egyptian Space Summit](https://ieenu.com/spacesummit), they also had in mind participating with this new website in the [IEEE student branch website contest](https://students.ieee.org/student-opportunities/sac-awards-programs/ieee-student-branch-website-contest/).
+[IEEE NU](https://ieeenu.com), a student activity in Nile University wanted to replace their old website with a new one that can represent them online and hold the forms and registration processes for their annual events like the [Egyptian Space Summit](https://ieenu.com/spacesummit), they also had in mind participating with this new website in the [IEEE student branch website contest](https://students.ieee.org/student-opportunities/sac-awards-programs/ieee-student-branch-website-contest/).
 
 <VideoPlayer loop autoPlay="autoplay" muted caption="IEEE NU's previous website" playsInline>
   <source src="/videos/projects/legacy-ieeenu.webm" type="video/webm" />
@@ -16,18 +16,18 @@ previewImage: "/images/projects/screenshots/ieeenu.png"
 
 #### Web stack and explanation
 
-As it was intended to be mostly a static website, so, I went with nextjs as a framework and a static site generator. I choosed firestore as a database option for the website to hold the data of the forms and determined to have some 3d interactive elements on the website using [threejs](https://threejs.org). 
+As it was intended to be mostly a static website, I went with nextjs as a framework and a static site generator. I chose firestore as a database option for the website to hold the data of the forms and determined to have some 3d interactive elements on the website using [threejs](https://threejs.org). 
 
-The design and the structure of the website considered the newest SEO patterns by using structured data to provide info about each page to the search engine scrappers. These decisions resulted in getting the first result on google in mostly all the keywords related to IEEE NU SB or thier annaul event the egyptian space summit.
+The design and the structure of the website considered the newest SEO patterns by using structured data to provide info about each page to the search engine scrappers. These decisions resulted in getting the first result on google in mostly all the keywords related to IEEE NU SB, their activities, or their annual events.
 
-The styling however was done using several global scss stylesheets that followed the UI Design I created earlier on Adobe XD, the design followed the structure of the other IEEE SBs websites to provide a good user experience and avoid confusion, nevertheless the new design introuduced several new sections like the recruitment page that introduces those who are willing to volunteer with info about the SB and a form to sign up and other sections.
+The styling however was done using several global scss stylesheets that followed the UI Design I created earlier on Adobe XD, the design followed the structure of the other IEEE SBs websites to provide a good user experience and avoid confusion, nevertheless, the new design introduced several new sections like the recruitment page that introduces those who are willing to volunteer with info about the SB and a form to sign up and other sections.
 
 <picture>
   <source srcSet="/images/projects/ui_designs.webp" type="image/webp" />
   <img src="/images/projects/ui_designs.png" alt="A description of the image." loading="lazy" decoding="async" />
 </picture>
 
-A design decision was taken by including a 3d interactive element to each hero section on each page. Those 3d element was created using bender and exported in a compressed glb format to suit the slow network connections.
+A design decision was taken by including a 3d interactive element in each hero section on each page. That 3d element was created using bender and exported in a compressed glb format to suit the slow network connections.
 
 {/*  Remember to include some examples of the 3d models here */}
 
@@ -37,5 +37,4 @@ A design decision was taken by including a 3d interactive element to each hero s
   <source srcSet="/images/projects/snapshots/ieee-snapshot.avif" type="image/avif" />
   <ImageFrame src="/images/projects/snapshots/ieee-snapshot.png" alt="A description of the image." loading="lazy" decoding="async" caption="Lighthouse's analysis of the website" />
 </picture>
-
-Putting into considration the performance of the website, all the images used was in nextgen format (either webp or avif) and such a decision raised the performance of the website by about 50%.
+Putting into consideration the performance of the website, all the images used were in nextgen format (either webp or avif) and such a decision raised the performance of the website by about 50%.

@@ -12,7 +12,7 @@ const Bio = () => {
       <SecondColumn>
         <Title>About Me</Title>
         <Description>
-          I&apos;m Omar Khaled, a Computer engineering student at Nile University in Egypt. I&apos;m interested in web development and everything in its orbit, especially the front-end side, my dual knowledge in design and  development allows me to understand the user needs as well as the technical need of any project which result in an awesome user experience.
+          It is me, Omar Khaled, a computer engineering student at Nile University in Egypt. I&apos;m interested in web development in addition to everything in its orbit, especially the front-end side. My dual knowledge in design and development allows me to understand the user&apos;s needs and the technical needs related to any project to get more than the expected results.
         </Description>
         <Button mode="primary" as={"a"} href={"mailto:o.abuelfetohahmed@nu.edu.eg?subject=Project%20Proposal"}>Contact Me</Button>
       </SecondColumn>

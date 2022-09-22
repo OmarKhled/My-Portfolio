@@ -18,6 +18,10 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   html, body {
     height: 100%;
     font-family: "Wotfard", 'Work Sans', Arial, Helvetica, sans-serif;
@@ -28,6 +32,11 @@ const GlobalStyles = createGlobalStyle`
     background-color: var(--background);
     color: var(--textColor);
     transition: color 400ms ease, background-color 400ms ease ;
+  }
+
+  ::selection {
+    background-color: var(--violetEggplant-300);
+    color: var(--mintCream)
   }
 
   img, picture, video, canvas {

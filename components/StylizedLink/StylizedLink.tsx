@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-const LinkWrapper = styled.a<{ color: "standard" | "primary" }>`
-  --color: ${(p) => p.color === "standard" ? "var(--textColor)" : "var(--primary)"};
+const LinkWrapper = styled.a<{ color: "standard" | "primary" | `var(--${string})` }>`
+  --color: ${(p) => p.color === "standard" ? "var(--textColor)" : p.color === "primary" ? "var(--primary)" : p.color};
   color: var(--color);
   text-decoration: none;
   transition: box-shadow 300ms ease;

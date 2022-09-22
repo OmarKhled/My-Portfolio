@@ -1,6 +1,7 @@
 import Button from "@components/Button";
 import { clamp } from "@components/GlobalStyles/GlobalStyles.helpers";
 import { NextPage } from "next";
+import Link from "next/link";
 import styled from "styled-components";
 import MouseScroll from "./MouseScrollIcon";
 
@@ -9,7 +10,9 @@ const Hero: NextPage = () => {
     <Wrapper>
       <Title>I Develop Things for the Web<Dot>.</Dot></Title>
       <Muted>Build • Develop • Ship</Muted>
-      <Button as="a" href="#" mode="primary">Get to know me more</Button>
+      <Link href="/about" passHref>
+        <Button as="a" mode="primary">Get to know me more</Button>
+      </Link>
       <MouseScrollIcon />
     </Wrapper>
   );
