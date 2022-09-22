@@ -14,7 +14,7 @@ const Bio = () => {
         <Description>
           I&apos;m Omar Khaled, a Computer engineering student at Nile University in Egypt. I&apos;m interested in web development and everything in its orbit, especially the front-end side, my dual knowledge in design and  development allows me to understand the user needs as well as the technical need of any project which result in an awesome user experience.
         </Description>
-        <Button mode="primary" as={"a"} href={"mailto:o.abuelfetohahmed?subject=Project%20Proposal"}>Contact Me</Button>
+        <Button mode="primary" as={"a"} href={"mailto:o.abuelfetohahmed@nu.edu.eg?subject=Project%20Proposal"}>Contact Me</Button>
       </SecondColumn>
     </Wrapper>
   );
@@ -27,10 +27,10 @@ const Wrapper = styled.section`
   align-items: center;
   text-align: center;
   padding-bottom: 5rem;
-
-  gap: 4rem;
+  gap: 2rem;
 
   @media ${QUERIES.tabletAndUp} {
+    gap: 4rem;
     flex-direction: row;
     text-align: left;
   }
