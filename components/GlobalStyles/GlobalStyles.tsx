@@ -35,7 +35,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   ::selection {
-    background-color: var(--violetEggplant-300);
+    background-color: var(--hotPink-350);
     color: var(--mintCream)
   }
 
