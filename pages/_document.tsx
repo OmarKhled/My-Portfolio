@@ -3,6 +3,7 @@ import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/do
 import { ServerStyleSheet } from 'styled-components'
 
 import codeToRunOnClient from '@utils/themingIntializerInlineScript';
+import Script from 'next/script';
 
 const MyDocument: NextPage = ({ styles }: any) => {
   return (
@@ -29,6 +30,18 @@ const MyDocument: NextPage = ({ styles }: any) => {
         <div id='mobile-nav-portal'></div>
         <Main />
         <NextScript />
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-H8BC1P6NJS`}
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-H8BC1P6NJS');
+          `}
+        </Script>
       </body>
     </Html>
   )
