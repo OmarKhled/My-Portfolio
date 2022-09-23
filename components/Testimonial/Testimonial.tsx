@@ -2,14 +2,14 @@ import StylizedLink from '@components/StylizedLink'
 import React from 'react'
 import styled from 'styled-components'
 
-const Testimonial = ({ name = "Youssef Nasser", job = "Project Manger at Nilepreneurs", children = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo error assumenda vel dolorum sapiente, reprehenderit illo alias.", img="/images/Testimonials/nasser.webp" }) => {
+const Testimonial = ({ name = "Youssef Nasser", job = "Project Manger at Nilepreneurs", children = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo error assumenda vel dolorum sapiente, reprehenderit illo alias.", img="/images/Testimonials/nasser.webp", linkedin = "https://linkedin.com/in" }) => {
   return (
     <Wrapper>
       <Profile>
         <ProfileImage src={img} alt={`${name} Image`}/>
         <div>
           <Name>{name}</Name>
-          <Job href='/' color="standard">{job}</Job>
+          <Job href={linkedin} color="standard">{job}</Job>
         </div>
       </Profile>
       <Description>{children}</Description>
