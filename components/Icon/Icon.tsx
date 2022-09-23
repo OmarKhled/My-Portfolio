@@ -32,7 +32,7 @@ const Icon = ({ icon }: { icon: icon }) => {
   ]
   return <>
     {
-      Icons.map(Icon => (Icon.name === icon ? <Icon.component key={Icon.name} /> : <></>))
+      Icons.map(Icon => (Icon.name === icon ? <Icon.component key={icon} /> : <></>))
     }
   </>
 }
