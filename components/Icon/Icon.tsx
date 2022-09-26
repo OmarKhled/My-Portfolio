@@ -32,18 +32,9 @@ const Icon = ({ icon }: { icon: icon }) => {
   ]
   return <>
     {
-      Icons.map(Icon => (Icon.name === icon ? <Icon.component key={icon} /> : <></>))
+      Icons.map(Icon => (Icon.name === icon && <Icon.component key={icon} /> ))
     }
   </>
 }
-
-const Wrapper = styled.li`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  &>svg {
-    width: 40px;
-  }
-`
 
 export default Icon;

@@ -9,7 +9,7 @@ const Testimonial = ({ name = "Youssef Nasser", job = "Project Manger at Nilepre
         <ProfileImage src={img} alt={`${name} Image`}/>
         <div>
           <Name>{name}</Name>
-          <Job href={linkedin} color="standard">{job}</Job>
+          <Job href={linkedin} target="_blank" color="standard">{job}</Job>
         </div>
       </Profile>
       <Description>{children}</Description>

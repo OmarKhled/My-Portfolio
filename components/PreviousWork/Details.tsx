@@ -9,7 +9,7 @@ const Details: NextPage = () => {
       <Description>
         I like to develop a wide range of products for the web like chrome extensions, static websites, full stack apps, landing pages, etc… Throught out the past few years, I’ve had several opportunities to create memorable products that aren’t only enjoyable to use, but also written in a code that is easy to maintain.
       </Description>
-      <Testimonial name="Mohamed Mustafa" job="Rafiqi CEO" img='/images/Testimonials/mustafa.webp' linkedin='https://www.linkedin.com/in/mmohamedmmustafa/'>
+      <Testimonial name="Mohamed Mustafa" job="Rafiqi COO" img='/images/Testimonials/mustafa.webp' linkedin='https://www.linkedin.com/in/mmohamedmmustafa/'>
         It&apos;s rare to find someone who knows something about everything and everything about something, which makes Omar an outstanding team player: He is a superlative web developer who always impressed me with meeting the deliverables days before the deadline with the requested quality and better. He can create designs, create content, shoot and edit videos, and handle projects.
       </Testimonial>
       <Testimonial name="Youssef Nasser" job="Project Manger at Nilepreneurs" img='/images/Testimonials/nasser.webp' linkedin='https://www.linkedin.com/in/youssef-nasser-06aa201a5/'>
