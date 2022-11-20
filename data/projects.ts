@@ -12,6 +12,14 @@ export default [
     backgroundColor: COLORS.royalBlue.default,
   },
   {
+    name: "Personal Portfolio",
+    avatarImg: "/images/projects/avatar/portfolio.webp",
+    client: "OmarKhled",
+    year: "2022",
+    link: slug("personal-portfolio"),
+    backgroundColor: COLORS.violetEggplant["default"],
+  },
+  {
     name: "DedMet Extension",
     avatarImg: "/images/projects/avatar/dedmet.webp",
     client: "DedMet",

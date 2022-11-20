@@ -29,6 +29,9 @@ const Paragraph = styled.p`
   text-align: justify;
   margin: 15px 0;
 `;
+const UL = styled.ul`
+  margin: 15px 0;
+`;
 
 const components = {
   h4: (props: any) => <Heading2 {...props} />,
@@ -38,6 +41,7 @@ const components = {
   VideoPlayer,
   p: (props: any) => <Paragraph {...props} />,
   ImageFrame,
+  ul: UL,
 };
 
 const Project: NextPage<Props> = ({ source, frontMatter }) => {
