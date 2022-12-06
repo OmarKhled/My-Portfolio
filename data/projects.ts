@@ -32,7 +32,7 @@ export default [
     avatarImg: "/images/projects/avatar/store.webp",
     client: "IEEE NU",
     year: "2020",
-    link: "http://ieeestore.nu.edu.eg",
+    link: "",
     backgroundColor: COLORS.hotPink.default,
   },
 ];
