@@ -31,8 +31,8 @@ export default [
     name: "IEEE NU Store",
     avatarImg: "/images/projects/avatar/store.webp",
     client: "IEEE NU",
-    year: "2020",
-    link: "",
+    year: "2023",
+    link: "https://store.ieeenu.com",
     backgroundColor: COLORS.hotPink.default,
   },
 ];
