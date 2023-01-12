@@ -12,12 +12,20 @@ export default [
     backgroundColor: COLORS.royalBlue.default,
   },
   {
+    name: "IEEE NU Store",
+    avatarImg: "/images/projects/avatar/store.webp",
+    client: "IEEE NU",
+    year: "2023",
+    link: "https://store.ieeenu.com",
+    backgroundColor: COLORS.butterflyBlue[600],
+  },
+  {
     name: "Personal Portfolio",
     avatarImg: "/images/projects/avatar/portfolio.webp",
     client: "OmarKhled",
     year: "2022",
     link: slug("personal-portfolio"),
-    backgroundColor: COLORS.violetEggplant["default"],
+    backgroundColor: COLORS.violetEggplant.default,
   },
   {
     name: "DedMet Extension",
@@ -26,13 +34,5 @@ export default [
     year: "2022",
     link: slug("dedmet"),
     backgroundColor: COLORS.goldenYellow.default,
-  },
-  {
-    name: "IEEE NU Store",
-    avatarImg: "/images/projects/avatar/store.webp",
-    client: "IEEE NU",
-    year: "2023",
-    link: "https://store.ieeenu.com",
-    backgroundColor: COLORS.hotPink.default,
-  },
+  }
 ];

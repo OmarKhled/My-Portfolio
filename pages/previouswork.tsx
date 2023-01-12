@@ -12,7 +12,7 @@ const PreviousWork: NextPage = () => {
       </Head>
       <Section>
         <SectionTitle>Projects</SectionTitle>
-        <ProjectsGrid />
+        <ProjectsGrid fullgrid />
       </Section>
     </>
   );
