@@ -12,13 +12,24 @@ const Bio = () => {
       <SecondColumn>
         <Title>About Me</Title>
         <Description>
-          It is me, Omar Khaled, a computer engineering student at Nile University in Egypt. I&apos;m interested in web development in addition to everything in its orbit, especially the front-end side. My dual knowledge in design and development allows me to understand the user&apos;s needs and the technical needs related to any project to get more than the expected results.
+          It is me, Omar Khaled, a computer engineering student at Nile
+          University in Egypt. I&apos;m interested in web development in
+          addition to everything in its orbit, especially the front-end side. My
+          dual knowledge in design and development allows me to understand the
+          user&apos;s needs and the technical needs related to any project to
+          get more than the expected results.
         </Description>
-        <Button mode="primary" as={"a"} href={"mailto:o.abuelfetohahmed@nu.edu.eg?subject=Project%20Proposal"}>Contact Me</Button>
+        <Button
+          mode="primary"
+          as={"a"}
+          href={"mailto:me@omarkhled.me?subject=Project%20Proposal"}
+        >
+          Contact Me
+        </Button>
       </SecondColumn>
     </Wrapper>
   );
-}
+};
 
 const Wrapper = styled.section`
   margin-top: ${clamp(80, 150, BREAKPOINTS.laptopStart)};
@@ -34,17 +45,14 @@ const Wrapper = styled.section`
     flex-direction: row;
     text-align: left;
   }
-`
+`;
 const FirstColumn = styled.div`
   width: min(100%, 20rem);
   @media ${QUERIES.tabletAndUp} {
     flex-shrink: 0;
   }
-  
-`
-const Image = styled.img`
-  
-`
+`;
+const Image = styled.img``;
 const SecondColumn = styled.div`
   display: flex;
   flex-direction: column;
@@ -53,14 +61,13 @@ const SecondColumn = styled.div`
   @media ${QUERIES.tabletAndUp} {
     align-items: initial;
   }
-`
+`;
 const Title = styled.h2`
   color: var(--tertiary);
-`
+`;
 const Description = styled.p`
   max-width: 48.5625rem;
   text-align: justify;
-`
-
+`;
 
 export default Bio;
