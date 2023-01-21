@@ -80,13 +80,13 @@ const ScrollComponent: NextPage<{ scrollYProgress: any }> = ({
       <SecondImage
         style={secondImage}
         aria-hidden="true"
-        src="/images/projects/screenshots/store.png"
+        src="/images/projects/screenshots/dedmet.png"
       />
       <ThirdImage
         ref={imgRef}
         aria-hidden="true"
         style={thirdImage}
-        src="/images/projects/screenshots/dedmet.png"
+        src="/images/projects/screenshots/store.png"
       />
     </ScrollWrapper>
   );

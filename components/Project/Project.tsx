@@ -49,7 +49,7 @@ const Wrapper = styled.a<{ backgroundColor: string }>`
   --bg: ${(p) => p.backgroundColor};
   --titleColor: ${(p) => getAppropiateColor(p.backgroundColor, "primary")};
   --mutedColor: ${(p) => getAppropiateColor(p.backgroundColor, "secondary")};
-  --padding: ${clamp(22, 45)};
+  --padding: ${clamp(30, 45)};
 
   display: block;
   background-color: var(--bg);
