@@ -54,6 +54,6 @@ const PreviewImage = styled.img`
   width: 100%;
   border: hsl(200, 1%, 40%) solid 1px;
   border-top: none;
-  border-radius: 0 0 8px 8px;
+  border-radius: 0 0 8px 8px !important;
 `;
 export default ProjectDescription;
