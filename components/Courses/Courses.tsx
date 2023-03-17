@@ -7,7 +7,7 @@ const Courses = () => {
   return (
     <Wrapper>
       {courses?.map((course) => (
-        <Course {...course} />
+        <Course key={course.name} {...course} />
       ))}
     </Wrapper>
   );
