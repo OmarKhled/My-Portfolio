@@ -27,7 +27,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   margin: auto;
-  margin-top: ${clamp(60, 160)};
+  margin-top: ${clamp(60, 150)};
   width: fit-content;
   gap: 2rem;
   padding: 2rem 0;
