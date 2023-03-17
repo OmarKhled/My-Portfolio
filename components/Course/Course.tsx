@@ -32,16 +32,18 @@ const Wrapper = styled.a`
   text-align: center;
   width: min(100%, 25rem);
   cursor: pointer;
-  &:hover {
-    ${Title} {
-      box-shadow: 0px 3px 0px var(--textColor);
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      ${Title} {
+        box-shadow: 0px 3px 0px var(--textColor);
+      }
     }
   }
   text-decoration: none;
   color: var(--textColor);
 `;
 const Logo = styled.img`
-  width: max(90%, 10rem);
+  width: max(65%, 10rem);
   margin-bottom: 0.8rem;
 `;
 const Description = styled.p`

@@ -40,7 +40,6 @@ const PreviewWrapper = styled.div<{ img: string }>`
     }
   }
   background-image: url(${(p) => p.img});
-  background-image: url(/images/courses/webfundamentals/cover.webp);
   background-size: cover;
   background-position: top;
   border-radius: ${clamp(15, 25)};
