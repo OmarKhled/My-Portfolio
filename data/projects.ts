@@ -16,7 +16,7 @@ export default [
     avatarImg: "/images/projects/avatar/store.webp",
     client: "IEEE NU",
     year: "2023",
-    link: "https://store.ieeenu.com",
+    link: slug("ieeenustore"),
     backgroundColor: COLORS.butterflyBlue[600],
   },
   {
