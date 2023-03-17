@@ -12,6 +12,7 @@ import Button from "@components/Button";
 import StylizedLink from "@components/StylizedLink";
 import UsedTechnologies from "@components/UsedTechnologies";
 import Footer from "@components/Footer";
+import Courses from "@components/Courses";
 
 const Home: NextPage = () => {
   return (
@@ -39,6 +40,10 @@ const Home: NextPage = () => {
       <Section>
         <SectionTitle>Selected Projects</SectionTitle>
         <ProjectsGrid />
+      </Section>
+      <Section>
+        <SectionTitle>Checkout Some of my courses</SectionTitle>
+        <Courses />
       </Section>
       <Section>
         <Designs />
