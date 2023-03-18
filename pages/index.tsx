@@ -42,7 +42,7 @@ const Home: NextPage = () => {
         <ProjectsGrid />
       </Section>
       <Section>
-        <SectionTitle>Checkout Some of my courses</SectionTitle>
+        <SectionTitle>Checkout some of my courses</SectionTitle>
         <Courses />
       </Section>
       <Section>
