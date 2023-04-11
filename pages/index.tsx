@@ -10,9 +10,8 @@ import Designs from "@components/Designs";
 import Section from "@components/Section";
 import Button from "@components/Button";
 import StylizedLink from "@components/StylizedLink";
-import UsedTechnologies from "@components/UsedTechnologies";
-import Footer from "@components/Footer";
 import Courses from "@components/Courses";
+import Footer from "@components/Footer";
 
 const Home: NextPage = () => {
   return (
