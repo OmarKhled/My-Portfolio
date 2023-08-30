@@ -46,7 +46,7 @@ const Home: NextPage = () => {
         <ProjectsGrid />
       </Section>
       <Section>
-        <SectionTitle>Courses I've Lectured</SectionTitle>
+        <SectionTitle>Courses I&apos;ve Lectured</SectionTitle>
         <Courses />
       </Section>
       <Section>
