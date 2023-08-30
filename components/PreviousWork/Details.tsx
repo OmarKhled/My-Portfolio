@@ -7,11 +7,13 @@ const Details: NextPage = () => {
     <>
       <Title>Worked on a bunch of blazing web projects.</Title>
       <Description>
-        I like to create a wide range of products for the web. From Chrome
-        extensions and emails to full-stack applications and websites, Throught
-        out the past few years, I’ve had the privilege and the opportunities to
-        create memorable products that aren’t only enjoyable to use, but also
-        written in a code that is responsible and easy to maintain.
+        I’m a design-minded front-end engineer. My role is sometimes referred to
+        as a front-end designer, UI developer, UI engineer, or a design
+        engineer. I create a wide range of products for the web from browser
+        extensions to CLI tools, emails, and more, not just websites! My focus
+        is always on delivering engaging, user-friendly products that exceed
+        expectations, while also placing a strong emphasis on writing clean and
+        maintainable code.
       </Description>
       <Testimonial
         name="Mohamed Mustafa"
