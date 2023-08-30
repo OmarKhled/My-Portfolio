@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 
@@ -10,11 +11,13 @@ interface props {
 
 const Course = ({ name, avatarImg, description, link }: props) => {
   return (
-    <Wrapper href={link}>
-      <Logo src={avatarImg} />
-      <Title>{name}</Title>
-      <Description>{description}</Description>
-    </Wrapper>
+    <Link href={link} passHref>
+      <Wrapper href={link}>
+        <Logo src={avatarImg} />
+        <Title>{name}</Title>
+        <Description>{description}</Description>
+      </Wrapper>
+    </Link>
   );
 };
 
